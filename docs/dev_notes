@@ -1,0 +1,19 @@
+
+
+
+
+
+Resource about "card" components:
+https://uxdesign.cc/design-better-cards-c0d12ab581c4#.g5mjgtyj3
+
+Blog post about React RSS feed reader:
+http://matthewcodes.github.io/blog/2015/04/18/react-dot-js-feedwidget/
+
+Parsing RSS feeds in Javascript:
+https://www.raymondcamden.com/2015/12/08/parsing-rss-feeds-in-javascript-options
+
+Add Keyboard Shortcuts:
+j - next article
+k - previous article
+enter - open article
+c - visit article link
