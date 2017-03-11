@@ -2,7 +2,7 @@
 ---
 **PostReader** is a web-based RSS feed reader inspired by Feedly. The MVP version will be optimized for desktop viewing (as opposed to mobile) and will include the following features:
 
-* New account creation, login, and a demo login view.
+* New account creation, login, and a demo login for guest viewing.
 * A production README documenting the creation process and support materials.
 * Hosting on Heroku.
 * The ability to subscribe to RSS **feeds** and view a list of articles within them.
@@ -22,12 +22,14 @@ If time allows, the following bonus features will be added:
 * https://trello.com/b/AGLY5BYA/postreader
 * http://PostReader.net (coming soon)
 * Heroku link coming soon
+
 ---
 ### Documents
-* api-endpoints.md
-* component-hierarchy.md
-* sample-state.md
-* schema.md
+* [API  Endpoints](https://github.com/karmapoint/PostReader/blob/master/docs/api-endpoints.md )
+* [Component Hierarchy](https://github.com/karmapoint/PostReader/blob/master/docs/component-hierarchy.md)
+* [Sample State](https://github.com/karmapoint/PostReader/blob/master/docs/sample-state.md)
+* [Schema](https://github.com/karmapoint/PostReader/blob/master/docs/schema.md)
+
 ---
 ## Wireframes
 
