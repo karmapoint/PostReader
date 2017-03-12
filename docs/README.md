@@ -1,5 +1,7 @@
-# Development README
+# Development README  ![alt text](https://github.com/karmapoint/PostReader/blob/master/docs/dev_assets/content_header_logo.png?raw=true "PostReader logo") 
 ---
+
+
 **PostReader** is a web-based RSS feed reader inspired by Feedly. The MVP version will be optimized for desktop viewing (as opposed to mobile) and will include the following features:
 
 * New account creation, login, and a demo login for guest viewing.
@@ -72,7 +74,7 @@ If time allows, the following bonus features will be added:
 **Objective:** Homepage content without a logged in user is complete and looks good. Entire app is polished and clean looking.
 
 ---
- 
+
 * BONUS: Read later (time permitting)
 * BONUS: Share posts (time permitting)
 * BONUS: Search user's articles (time permitting)
