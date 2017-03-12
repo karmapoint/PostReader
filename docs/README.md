@@ -32,11 +32,11 @@ If time allows, the following bonus features will be added:
 
 ---
 ## Wireframes
-* Home/Signup/Login - Logged Out
-* Home/Popular - Logged In
-* Collection/Article - Logged In
-* Feed/Article - Logged In
-* Edit Collections - Logged In
+* [Home/Signup/Login - Logged Out](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Home%252FLogin%252FSignup%20-%20Logged%20out.png)
+* [Home/Popular - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Home%252FPopular%20-%20Logged%20in.png)
+* [Collection/Article - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Collection%252FArticle%20-%20Logged%20in.png)
+* [Feed/Article - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Feed%252FArticle%20-%20Logged%20in.png)
+* [Edit Collections - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Edit%20Collections%20-%20Logged%20in.png)
 ---
 ## Features
 
