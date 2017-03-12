@@ -32,7 +32,12 @@ If time allows, the following bonus features will be added:
 
 ---
 ## Wireframes
-
+* Home/Signup/Login - Logged Out
+* Home/Popular - Logged In
+* Collection/Article - Logged In
+* Feed/Article - Logged In
+* Edit Collections - Logged In
+---
 ## Features
 
 ## Development Timeline
