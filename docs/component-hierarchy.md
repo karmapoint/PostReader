@@ -1,33 +1,33 @@
-# Component Heirarchy
-* Root
- * HomeContent
-   * AuthContainer
-      * SignupForm
-      * LoginForm
-  * ContentContainer
-    * Sidebar
-     * Navigation
-        * NavigationItem
-     * CollectionMenu
-        * CollectionItem
-          * FeedItem
-      * AddContent
-    * Content
-      * ContentHeader
-        * CurrentUserMenu
-      * Content Title
-      * MainContent
-        * Popular
-          * FeedPreview
-        * Collection
-          * ArticlePreview
-          * Article
-        * Feed
-          * ArticlePreview
-          * Article
-        * EditCollections
-          * CollectionOverview
-            * FeedPlacement
+# Component Hierarchy
+* **Root**
+ * **HomeContent**
+   * **AuthContainer**
+      * **SignupForm**
+      * **LoginForm**
+  * **ContentContainer**
+    * **Sidebar**
+      * **Navigation**
+        * **NavigationItem**
+     * **CollectionMenu**
+        * **CollectionItem** (collection.name, collection.feeds.unread.length)
+          * **FeedItem** (feed.title, feed.favicon, feed.unread.length)
+      * **AddContent**
+    * **Content**
+      * **ContentHeader**
+        * **CurrentUserMenu** (CurrentUser.name, CurrentUser.email)
+      * **Content Title** (currentCollection.name/currentFeed.title, unread.length)
+      * **MainContent**
+        * **Popular** (popularFeeds)
+          * **FeedPreview** (popularFeeds.feed.title, popularFeeds.feed.description)
+        * **Collection** (currentCollection/currentFeed)
+          * **ArticlePreview** (article.title, article.content, article.thumbnail, article.feed, article.author, article.postTime)
+          * **Article** (article.title, article.content, article.thumbnail, article.feed, article.author, article.postTime)
+        * **Feed** (currentCollection/currentFeed)
+          * **ArticlePreview** (article.title, article.content, article.thumbnail, article.feed, article.author, article.postTime)
+          * **Article**  (article.title, article.content, article.thumbnail, article.feed, article.author, article.postTime)
+        * **EditCollections** (collections)
+          * **CollectionOverview** (collection.title, collection.feeds)
+            * **FeedPlacement** (feed.title, feed.favicon)
 
 ## Routes
 
