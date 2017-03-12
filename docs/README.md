@@ -1,4 +1,4 @@
-# Development README  ![alt text](https://github.com/karmapoint/PostReader/blob/master/docs/dev_assets/content_header_logo.png?raw=true "PostReader logo") 
+# Development README  ![alt text](https://github.com/karmapoint/PostReader/blob/master/docs/dev_assets/content_header_logo.png?raw=true "PostReader logo")
 ---
 
 
@@ -32,6 +32,9 @@ If time allows, the following bonus features will be added:
 * [Sample State](https://github.com/karmapoint/PostReader/blob/master/docs/sample-state.md)
 * [Schema](https://github.com/karmapoint/PostReader/blob/master/docs/schema.md)
 
+* [Assorted Dev assets](https://github.com/karmapoint/PostReader/tree/master/docs/dev_assets)
+* [Dev Notes](https://github.com/karmapoint/PostReader/blob/master/docs/dev_notes.md)
+
 ---
 ## Wireframes
 * [User flow](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader_User_flow.png)
@@ -40,6 +43,7 @@ If time allows, the following bonus features will be added:
 * [Collection/Article - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Collection%252FArticle%20-%20Logged%20in.png)
 * [Feed/Article - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Feed%252FArticle%20-%20Logged%20in.png)
 * [Edit Collections - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Edit%20Collections%20-%20Logged%20in.png)
+
 ---
 ## Development Timeline
 
