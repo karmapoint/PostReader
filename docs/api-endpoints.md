@@ -3,14 +3,29 @@
 ### Root
 * GET /
 
+## JSON API
+
 ### Users
-* GET /users/new
 * POST /users
 * PATCH /users
 
 ### Session
-* GET /session/new
 * POST /session
-* DELETE /session 
+* DELETE /session
 
-## JSON API
+
+### Collections
+* GET /api/collections
+* POST /api/collections
+* GET /api/collections/:id
+* PATCH /api/collections/:id  
+* DELETE /api/collections/:id
+
+### Feeds
+* GET /api/feeds/
+* POST /api/feeds
+* GET /api/feeds/:id
+* DELETE /api/feeds/:id
+
+### Articles
+* GET /api/article/:id

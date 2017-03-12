@@ -39,6 +39,41 @@ If time allows, the following bonus features will be added:
 * [Feed/Article - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Feed%252FArticle%20-%20Logged%20in.png)
 * [Edit Collections - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Edit%20Collections%20-%20Logged%20in.png)
 ---
-## Features
-
 ## Development Timeline
+
+### Phase 1: Backend setup and Front End User Auth
+#### (2 days)
+**Objective:** Functioning rails project with front-end authentication.
+
+
+### Phase 2: Add, delete, and display Collections
+#### (1 day)
+**Objective:** User can add and delete collections on the front-end.
+
+
+### Phase 3: Add, delete and display Feeds
+#### (2 days)
+**Objective:** User can add and delete feeds on the front-end.
+
+### Phase 4: Display Articles  
+#### (1 day)
+**Objective:** User can see the article detail view within a feed or collection on the front end.
+
+### Phase 5: Sidebar and navigation
+#### (1.5 days)
+**Objective:** Sidebar is complete and displays navigation, all collections, and all feeds on the front end.
+
+### Phase 6: User ability to edit categories
+#### (1.5 days)
+**Objective:** Drag and drop functionality for edit categories.
+
+### Phase 7: Homepage content and CSS improvements
+#### (1 day)
+**Objective:** Homepage content without a logged in user is complete and looks good. Entire app is polished and clean looking.
+
+---
+ 
+* BONUS: Read later (time permitting)
+* BONUS: Share posts (time permitting)
+* BONUS: Search user's articles (time permitting)
+* BONUS: Search for new feeds (time permitting)

@@ -31,6 +31,8 @@
 
 ## Routes
 
+### I feel like this are not complete or correct....
+
 | Path        | Component           |
 | ------------- |:-------------:|
 | "/"     | "HomeContent (if not logged in)" |
