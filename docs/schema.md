@@ -60,3 +60,16 @@ All tables have id (primary key), creation date, and modify date columns.
 * **belongs_to** :feed
 * **has_many** :collections through :feed
 * **has_many** :users through :collections
+
+
+
+## collection_feeds
+
+| column name        | data type           | details           |
+| ------------- |:-------------:|:-------------:|
+| collection_id | integer | not null, indexed |
+| feed_id | integer | not null, indexed |
+
+
+* **belongs_to** :feed
+* **belongs_to** :collection
