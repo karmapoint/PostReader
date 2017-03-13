@@ -36,7 +36,7 @@ If time allows, the following bonus features will be added:
 * [Dev Notes](https://github.com/karmapoint/PostReader/blob/master/docs/dev_notes.md)
 
 ---
-## Wireframes
+### Wireframes
 * [User flow](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader_User_flow.png)
 * [Home/Signup/Login - Logged Out](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Home%252FLogin%252FSignup%20-%20Logged%20out.png)
 * [Home/Popular - Logged In](https://github.com/karmapoint/PostReader/blob/master/docs/wireframes/PostReader%20Wireframe%20Home%252FPopular%20-%20Logged%20in.png)
