@@ -9,13 +9,13 @@
       * **Navigation**
         * **NavigationItem**
      * **CollectionMenu**
-        * **CollectionItem** (collection.name, collection.feeds.unread.length)
-          * **FeedItem** (feed.title, feed.favicon, feed.unread.length)
+        * **CollectionItem** (collection.name, collection.feeds.articles.length)
+          * **FeedItem** (feed.title, feed.favicon, feed.articles.length)
       * **AddContent**
     * **Content**
       * **ContentHeader**
         * **CurrentUserMenu** (CurrentUser.name, CurrentUser.email)
-      * **Content Title** (currentCollection.name/currentFeed.title, unread.length)
+      * **Content Title** (currentCollection.name/currentFeed.title, articles.length)
       * **MainContent**
         * **Popular** (popularFeeds)
           * **FeedPreview** (popularFeeds.feed.title, popularFeeds.feed.description)

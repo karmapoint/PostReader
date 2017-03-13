@@ -23,7 +23,7 @@ All tables have id (primary key), creation date, and modify date columns.
 | title | string | not null |
 | description | string | not null |
 | url | string | not null |
-| favicon | string | not null |
+| favicon_url | string | not null |
 
 
 * **has_many** :articles
@@ -70,6 +70,15 @@ All tables have id (primary key), creation date, and modify date columns.
 | collection_id | integer | not null, indexed |
 | feed_id | integer | not null, indexed |
 
+* ** [:collection_id, :feed_id], unique: true**
 
 * **belongs_to** :feed
 * **belongs_to** :collection
+
+## popular
+| column name        | data type           | details           |
+| ------------- |:-------------:|:-------------:|
+| feed_id | integer | not null, indexed |
+| popularity | integer | not null, indexed |
+
+* **belongs_to** :feed

@@ -48,30 +48,28 @@ If time allows, the following bonus features will be added:
 ## Development Timeline
 
 ### Phase 1: Backend setup and Front End User Auth
+#### (2.5 days)
+**Objective:** Functioning rails project with front-end authentication, basic rendering of Content, ContentHeading, userMenu, and sidebar.
+
+### Phase 2: Add and display Feeds
 #### (2 days)
-**Objective:** Functioning rails project with front-end authentication.
+**Objective:** User can add and display feeds on the front-end.
 
-
-### Phase 2: Add, delete, and display Collections
-#### (1 day)
-**Objective:** User can add and delete collections on the front-end.
-
-
-### Phase 3: Add, delete and display Feeds
-#### (2 days)
-**Objective:** User can add and delete feeds on the front-end.
-
-### Phase 4: Display Articles  
+### Phase 3: Display Articles  
 #### (1 day)
 **Objective:** User can see the article detail view within a feed or collection on the front end.
 
-### Phase 5: Sidebar and navigation
-#### (1.5 days)
-**Objective:** Sidebar is complete and displays navigation, all collections, and all feeds on the front end.
+### Phase 4: Add, and display Collections
+#### (1 day)
+**Objective:** User can add and display collections on the front-end.
+
+### Phase 5: Display popular feeds on homepage
+#### (.5 days)
+**Objective:** Show a list of feeds that users can add after they first login.
 
 ### Phase 6: User ability to edit categories
-#### (1.5 days)
-**Objective:** Drag and drop functionality for edit categories.
+#### (.5 days)
+**Objective:** Basic editing of categories (remove feeds/rename).
 
 ### Phase 7: Homepage content and CSS improvements
 #### (1 day)
@@ -79,7 +77,8 @@ If time allows, the following bonus features will be added:
 
 ---
 
+* BONUS: Search user's articles (time permitting)
 * BONUS: Read later (time permitting)
 * BONUS: Share posts (time permitting)
-* BONUS: Search user's articles (time permitting)
+* BONUS: Drag & Drop functionality for category edit
 * BONUS: Search for new feeds (time permitting)

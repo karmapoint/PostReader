@@ -48,6 +48,8 @@ icons:
 - plus: http://fontawesome.io/icon/plus/
 
 
+Munyo's recommended gem: **feedja**
+
 Resource about "card" components:
 https://uxdesign.cc/design-better-cards-c0d12ab581c4#.g5mjgtyj3
 
