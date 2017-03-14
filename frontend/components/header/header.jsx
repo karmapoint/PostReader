@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const sessionLinks = () => (
-  <nav className="login-signup">
+  <nav className="header_start_links">
     <Link to="/login" activeClassName="current">Existing User</Link>
     &nbsp;or&nbsp;
     <Link to="/signup" activeClassName="current">Get Started</Link>

@@ -13,3 +13,4 @@
  *= require_tree .
  *= require_self
  */
+.header_start_links { display:block; border: 1px solid red;}
