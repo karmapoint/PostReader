@@ -50,6 +50,8 @@ icons:
 
 Munyo's recommended gem: **feedja**
 
+  - didn't find feedja... but I found and am installing **feedjira**
+
 Resource about "card" components:
 https://uxdesign.cc/design-better-cards-c0d12ab581c4#.g5mjgtyj3
 
