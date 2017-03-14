@@ -6,8 +6,7 @@
     name: "Jane Doe"
   },
   forms: {
-    signUp: {errors: []},
-    logIn: {errors: []}
+    errors: [];
       },
   collections: {
     1: {

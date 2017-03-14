@@ -7,7 +7,7 @@
 
 ### Users
 * POST /users
-* PATCH /users
+
 
 ### Session
 * POST /session

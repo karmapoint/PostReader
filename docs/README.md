@@ -71,7 +71,11 @@ If time allows, the following bonus features will be added:
 #### (.5 days)
 **Objective:** Basic editing of categories (remove feeds/rename).
 
-### Phase 7: Homepage content and CSS improvements
+### Phase 7: Add reads
+#### (.5 days)
+**Objective:** Unread items display next to each collection and feed in the sidebar.
+
+### Phase 8: Homepage content and CSS improvements
 #### (1 day)
 **Objective:** Homepage content without a logged in user is complete and looks good. Entire app is polished and clean looking.
 

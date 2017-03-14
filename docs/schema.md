@@ -5,7 +5,6 @@ All tables have id (primary key), creation date, and modify date columns.
 
 | column name        | data type           | details           |
 | ------------- |:-------------:|:-------------:|
-| name | string | not null |
 | email | string | not null, unique, indexed |
 | password_digest | string | not null |
 | session_token | string | not null |
