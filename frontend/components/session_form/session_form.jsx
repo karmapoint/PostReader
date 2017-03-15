@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
 
 				<div className="login-form-box">
 				<form>
-					<img src="http://res.cloudinary.com/postreader/image/upload/v1489611558/postreader_content_logo_r1atgy.png" alt="PostReader Logo"></img>
+					<img src="https://res.cloudinary.com/postreader/image/upload/v1489611558/postreader_content_logo_r1atgy.png" alt="PostReader Logo"></img>
 
 					<h2><span>{this.props.formType}</span> to PostForm</h2>
 					<div className="errors">{this.renderErrors()}</div>
