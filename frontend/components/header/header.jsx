@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const sessionLinks = () => (
   <header className="content-header">
-    <Link to="/"><img src="/assets/postreader_content_logo.png" alt="PostReader Logo"></img> <span className="logo">PostReader</span></Link>
+    <Link to="/"><img src="http://res.cloudinary.com/postreader/image/upload/v1489611558/postreader_content_logo_r1atgy.png" alt="PostReader Logo"></img> <span className="logo">PostReader</span></Link>
     <div className="use-logout">
       <Link to="/login" activeClassName="current">Existing User</Link>
       &nbsp;or&nbsp;
