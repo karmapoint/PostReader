@@ -3,10 +3,14 @@ import HeaderContainer from '../header/header_container';
 
 
 const Content = () => (
-  <section className="content">
-    <HeaderContainer />
-
-  </section>
+  <div id="right" className="column">
+    <header className="top-right">
+      <HeaderContainer />
+    </header>
+    <section className="bottom content">
+      <p>Main content</p>
+    </section>
+  </div>
 );
 
 export default Content;

@@ -1,11 +1,16 @@
-html {
+html,body {
   height:100%;
 }
-body{
+
+#root {
+  height:100%;
+}
+.wrapper{
   height:100%;
   overflow: hidden;
   display: flex;
   box-sizing: border-box;
+  border: 1px solid #333333;
 }
 
 .column{
@@ -14,29 +19,44 @@ body{
   flex-direction:column;
 }
 
-.wrapper{
-  display:flex;
-  height:100%;
 
-}
 #left {
-  box-flex: 0;
-  width: 268px;
+  display:flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow-y: auto;
+  background-color: rgb(42, 43, 47);
+  color: rgba( 255, 255, 255, 0.9 );
+  font-weight:300;
+  line-height: 1.4em;
+  font-size:13px;
+  width:268px;
+  max-width: 268px;
+  height: 100%;
+}
+
+#right {
+  display:flex;
+  align-content: center;
+  background-color: $green;
+}
+
+.top-left{
+  flex-shrink: 0;
+}
+
+.top-right{
+  flex-shrink: 0;
+}
+
+.bottom{
   flex-grow: 1;
   overflow-y: auto;
-  background-color: yellow;
 }
-
-
 
 .content {
   width:700px;
-  -ms-flex: 1;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
+  display:block;
   border: 1px solid blue;
-  flex-grow: 1;
-  overflow-y: auto;
+
 }
