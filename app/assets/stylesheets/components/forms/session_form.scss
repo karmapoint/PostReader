@@ -22,39 +22,57 @@
   border: 1px solid $gray;
   border-radius: 14px;
 
-  input {
-    box-sizing: border-box;
-    width: 300px;
-    height:50px;
-    border: 1px solid $light-gray;
-    background-color: $near-white;
-    font-size: 17px;
-    padding: 8px;
-  }
+  form {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    input {
+      box-sizing: border-box;
+      width: 300px;
+      height:50px;
+      border: 1px solid $light-gray;
+      background-color: $near-white;
+      font-size: 17px;
+      padding: 8px;
+    }
 
-  input[type="submit"] {
-    background-color: $green;
-    border-radius: 8px;
-    color: white;
-    text-transform: uppercase;
-    margin-top: 24px;
-    border:none;
-  }
+    button {
+      background-color: $green;
+      width: 300px;
+      height:50px;
+      font-size: 17px;
+      border-radius: 8px;
+      color: white;
+      text-transform: uppercase;
+      margin-top: 24px;
+      border:none;
+    }
 
-  input[type="submit"]:hover {
-    background-color: $dark-green;
-  }
+    button:hover {
+      background-color: $dark-green;
+    }
 
+    .demoSubmit {
+      background-color: $light-gray;
+      margin-top:8px;
+      margin-bottom:4px;
+    }
 
-  h2 {
-    font-weight:600;
-    font-size: 22px;
-  }
+    .demoSubmit:hover {
+      background-color: $gray;
+    }
 
-  .errors {
-    color: $orange;
-    margin-top: 10px;
-    height:18px;
+    h2 {
+      font-weight:600;
+      font-size: 22px;
+    }
+
+    .errors {
+      color: $orange;
+      margin-top: 10px;
+      height:18px;
+    }
   }
   .switch {
     text-align:center;
@@ -71,9 +89,11 @@
 
   h2 span {
     text-transform: capitalize;
+    text-align: center;
   }
 
   img {
     margin-bottom: 20px;
+    text-align:center;
   }
 }

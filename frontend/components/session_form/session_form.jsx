@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link,hashHistory, withRouter } from 'react-router';
 
 class SessionForm extends React.Component {
 	constructor(props) {
@@ -7,6 +7,7 @@ class SessionForm extends React.Component {
 		this.state = { email: "", password: "" };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.clearErrors = this.clearErrors.bind(this);
+		this.demoSubmit = this.demoSubmit.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -24,7 +25,6 @@ class SessionForm extends React.Component {
 	}
 
 	clearErrors(){
-		console.log(this.props.errors);
 		this.props.errors.length = 0;
 	}
 
@@ -37,8 +37,17 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
+		console.log(user);
 		this.clearErrors();
-		this.props.processForm(user);
+		this.props.processForm(user).then(() => hashHistory.push('/'));
+	}
+
+	demoSubmit(e) {
+		e.preventDefault();
+		const user = this.state;
+		this.clearErrors();
+		this.props.login({email: "demo@guest.com", password: "testtest"})
+		.then(() => hashHistory.push('/'));
 	}
 
 	navLink() {
@@ -66,11 +75,13 @@ class SessionForm extends React.Component {
 	render() {
 		return (
 			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
+
+				<div className="login-form-box">
+				<form>
 					<img src="http://res.cloudinary.com/postreader/image/upload/v1489611558/postreader_content_logo_r1atgy.png" alt="PostReader Logo"></img>
 
 					<h2><span>{this.props.formType}</span> to PostForm</h2>
-					<p className="errors">{this.renderErrors()}</p>
+					<div className="errors">{this.renderErrors()}</div>
 					<div className="login-form">
 						<br/>
 							<input type="text"
@@ -86,11 +97,20 @@ class SessionForm extends React.Component {
 								onChange={this.update("password")}
 								className="login-input" />
 						<br/>
-						<input type="submit" value={this.props.formType} />
-						<br />
-						<p className="switch">{this.navLink()}</p>
+						<button type="submit"
+							onClick={this.handleSubmit} >
+							{this.props.formType}
+						</button>
+						<button type="submit" className="demoSubmit"
+							onClick={this.demoSubmit} >
+							DEMO
+						</button>
+
+
 					</div>
 				</form>
+				<p className="switch">{this.navLink()}</p>
+			</div>
 
 			</div>
 		);
