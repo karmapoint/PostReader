@@ -6,16 +6,26 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = { email: "", password: "" };
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.clearErrors = this.clearErrors.bind(this);
 	}
 
 	componentDidUpdate() {
 		this.redirectIfLoggedIn();
 	}
 
+	componentDidUpdate() {
+		this.clearErrors();
+	}
+
 	redirectIfLoggedIn() {
 		if (this.props.loggedIn) {
 			this.props.router.push("/");
 		}
+	}
+
+	clearErrors(){
+		console.log(this.props.errors);
+		this.props.errors.length = 0;
 	}
 
 	update(field) {
@@ -27,6 +37,7 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
+		this.clearErrors();
 		this.props.processForm(user);
 	}
 

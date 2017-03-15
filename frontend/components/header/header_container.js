@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import Header from './header';
+import Header from './header.jsx.erb';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser
