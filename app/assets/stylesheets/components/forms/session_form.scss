@@ -3,14 +3,77 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   justify-content: flex-start;
-  border: 1px solid #333333;
+  background-color: $blackish;
 }
 
 .login-form-box {
   display:flex;
-  height: 400px;
-  width: 400px;
-  border: 1px solid $blackish;
+  box-sizing: border-box;
+  align-items: center;
+  padding:30px;
+  margin: auto;
+  flex-direction:column;
+  height: 500px;
+  width: 360px;
+  background-color:#ffffff;
+  border: 1px solid $gray;
+  border-radius: 14px;
+
+  input {
+    box-sizing: border-box;
+    width: 300px;
+    height:50px;
+    border: 1px solid $light-gray;
+    background-color: $near-white;
+    font-size: 17px;
+    padding: 8px;
+  }
+
+  input[type="submit"] {
+    background-color: $green;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 24px;
+    border:none;
+  }
+
+  input[type="submit"]:hover {
+    background-color: $dark-green;
+  }
+
+
+  h2 {
+    font-weight:600;
+    font-size: 22px;
+  }
+
+  .errors {
+    color: $orange;
+    margin-top: 10px;
+    height:18px;
+  }
+  .switch {
+    text-align:center;
+    margin-top:20px;
+  }
+
+  a {
+    color: $light-gray;
+  }
+
+  a:hover {
+    color: $gray;
+  }
+
+  h2 span {
+    text-transform: capitalize;
+  }
+
+  img {
+    margin-bottom: 20px;
+  }
 }
