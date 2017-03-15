@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.clearErrors();
-		this.props.login({email: "demo@guest.com", password: "testtest"})
+		this.props.login({email: "hello@guest.com", password: "hello@guest.com"})
 		.then(() => hashHistory.push('/'));
 	}
 
