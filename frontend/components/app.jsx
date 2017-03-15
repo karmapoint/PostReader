@@ -7,8 +7,11 @@ import Content from './content/content';
 const App = ({ children }) => (
   <div className="wrapper">
     <SidebarContainer />
-    <Content />
-    { children }
+    <div className="column right-side">
+      <HeaderContainer />
+      <Content />
+      { children }
+    </div>
   </div>
 );
 
