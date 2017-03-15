@@ -13,4 +13,6 @@
  *= require_tree .
  *= require_self
  */
+@import url("reset.css");
+
 .header_start_links { display:block; border: 1px solid red;}

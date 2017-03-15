@@ -55,8 +55,9 @@ Munyo's recommended gem: **feedja**
 Resource about "card" components:
 https://uxdesign.cc/design-better-cards-c0d12ab581c4#.g5mjgtyj3
 
-Blog post about React RSS feed reader:
+Blog posts about React RSS feed reader:
 http://matthewcodes.github.io/blog/2015/04/18/react-dot-js-feedwidget/
+https://www.sitepoint.com/building-an-rss-reader-in-rails-is-easy/
 
 Parsing RSS feeds in Javascript:
 https://www.raymondcamden.com/2015/12/08/parsing-rss-feeds-in-javascript-options

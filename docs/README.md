@@ -23,7 +23,7 @@ If time allows, the following bonus features will be added:
 * https://github.com/karmapoint/PostReader
 * https://trello.com/b/AGLY5BYA/postreader
 * http://PostReader.net (coming soon)
-* Heroku link coming soon
+* https://post-reader.herokuapp.com/
 
 ---
 ### Documents
