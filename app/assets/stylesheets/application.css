@@ -13,6 +13,17 @@
  *= require_tree .
  *= require_self
  */
-@import url("reset.css");
 
-.header_start_links { display:block; border: 1px solid red;}
+ /*// CSS RESET*/
+@import url("base/reset.css");
+
+/*// CORE*/
+@import url("base/colors.scss");
+@import url("base/layout.scss");
+
+/*// GRID*/
+
+/*//COMPONENTS*/
+
+@import "components/content/header.scss";
+@import "components/sidebar/sidebar.scss";

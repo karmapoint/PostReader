@@ -1,0 +1,42 @@
+html {
+  height:100%;
+}
+body{
+  height:100%;
+  overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.column{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.wrapper{
+  display:flex;
+  height:100%;
+
+}
+#left {
+  box-flex: 0;
+  width: 268px;
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: yellow;
+}
+
+
+
+.content {
+  width:700px;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  border: 1px solid blue;
+  flex-grow: 1;
+  overflow-y: auto;
+}
