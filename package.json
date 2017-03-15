@@ -29,7 +29,7 @@
   },
 
   "scripts": {
-    "postinstall": "webpack",
+    "heroku-postbuild": "webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

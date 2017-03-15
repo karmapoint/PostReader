@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
+
+
 
 const sessionLinks = () => (
   <header className="content-header">
@@ -24,7 +26,7 @@ const personalGreeting = (currentUser, logout) => (
     </div>
     <div className="user-logout">
       <h2 className="header-user">Hi, {currentUser.email}!</h2>
-      <button className="logout-button" onClick={logout}>Log Out</button>
+      <button className="logout-button" onClick={() => logout().then(hashHistory.push("/logout"))}>Log Out</button>
     </div>
 	</header>
 );

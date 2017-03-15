@@ -28,11 +28,12 @@ const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <Router history={ hashHistory }>
-        <Route path="/" component={ App } onEnter={_ensureLoggedIn} />
         <Route path="login" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn} />
         <Route path="/signup" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn}/>
+        <Route path="/" component={ App } onEnter={_ensureLoggedIn} />
+        <Route path="/logout" component={ App } onEnter={_ensureLoggedIn} />
       </Router>
     </Provider>
   );
