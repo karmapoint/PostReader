@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const sessionLinks = () => (
   <header className="content-header">
-    <Link to="/"><img src="/assets/postreader_content_logo.png" alt="PostReader Logo"></img> <span className="logo">PostReader</span></Link>
+    <Link to="/"><img src="/public/postreader_content_logo.png" alt="PostReader Logo"></img> <span className="logo">PostReader</span></Link>
     <div className="use-logout">
       <Link to="/login" activeClassName="current">Existing User</Link>
       &nbsp;or&nbsp;
@@ -16,7 +16,7 @@ const personalGreeting = (currentUser, logout) => (
   <header className="content-header">
     <div className="logo-block">
     <Link to="/">
-      <img src="/assets/postreader_content_logo.png" alt="PostReader Logo"></img>
+      <img src="/public/postreader_content_logo.png" alt="PostReader Logo"></img>
     </Link>
     <Link to="/" className="logo">
       PostReader
