@@ -1,1 +1,1 @@
-json.extract! @feed, :id, :title, :description, :url, :favicon_url
+json.extract! @feed, :id, :title, :description, :site_url, :feed_url, :favicon_url

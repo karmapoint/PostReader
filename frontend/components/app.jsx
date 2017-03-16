@@ -16,3 +16,12 @@ const App = ({ children }) => (
 );
 
 export default App;
+
+//Content
+// ---AddContent
+// ---Feeds (all)
+// ---Collections
+// ---Organzie
+// ---Feed/${id}
+// ---Category/${id}
+// ---Popular

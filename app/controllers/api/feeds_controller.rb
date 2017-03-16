@@ -10,6 +10,7 @@ class Api::FeedsController < ApplicationController
       render :show
     else
       render json: @feed.errors.full_messages, status:422
+    end
   end
 
   def show
@@ -23,7 +24,7 @@ class Api::FeedsController < ApplicationController
   private
 
   def feed_params
-    params.require(:feed).permit(:title, :description, :url, :favicon_url)
+    params.require(:feed).permit(:title, :description, :site_url, :feed_url, :favicon_url)
   end
 
 end

@@ -1,5 +1,5 @@
 class Feed < ApplicationRecord
 
-validates :title, :description, :url, :favicon_url, presence: true;
+validates :title, :description, :site_url, :feed_url, :favicon_url, presence: true;
 
 end
