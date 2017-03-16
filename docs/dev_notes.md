@@ -52,6 +52,11 @@ Munyo's recommended gem: **feedja**
 
   - didn't find feedja... but I found and am installing **feedjira**
 
+
+Get Favicon URLs:
+http://codingclues.eu/2009/retrieve-the-favicon-for-any-url-thanks-to-google/
+https://www.labnol.org/internet/get-favicon-image-of-websites-with-google/4404/  
+
 Resource about "card" components:
 https://uxdesign.cc/design-better-cards-c0d12ab581c4#.g5mjgtyj3
 
