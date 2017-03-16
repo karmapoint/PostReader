@@ -1,1 +1,44 @@
 .header_start_links { display:block; border: 1px solid red;}
+
+.logo-block {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top:10px;
+    color: $blackish;
+  }
+}
+
+.user-logout {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-top:10px;
+
+  h3 {
+    color: $light-gray;
+    font-size: 14px;
+    margin-right:12px;
+  }
+  button {
+    margin-right: 20px;
+    border: 1px solid $green;
+    background: #ffffff;
+    border-radius: 8px;
+    color: $green;
+  }
+  button:hover {
+    color: #ffffff;
+    border-color: transparent;
+    background-color: $green;
+  }
+}

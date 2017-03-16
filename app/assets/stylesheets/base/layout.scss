@@ -50,7 +50,7 @@ html,body {
   justify-content: space-between;
   box-sizing: border-box;
   height:60px;
-  border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid $near-white;
 
   img {
     height:30px;
@@ -86,7 +86,6 @@ html,body {
 
 .content {
   width:700px;
-  display:block;
   border: 1px solid blue;
 
 }
