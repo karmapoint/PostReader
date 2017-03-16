@@ -20,7 +20,7 @@ class SessionForm extends React.Component {
 
 	redirectIfLoggedIn() {
 		if (this.props.loggedIn) {
-			this.props.router.push("/");
+			this.props.router.push("/home");
 		}
 	}
 
@@ -39,7 +39,7 @@ class SessionForm extends React.Component {
 		const user = this.state;
 		console.log(user);
 		this.clearErrors();
-		this.props.processForm(user).then(() => hashHistory.push('/'));
+		this.props.processForm(user).then(() => hashHistory.push('/home'));
 	}
 
 	demoSubmit(e) {
@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
 		const user = this.state;
 		this.clearErrors();
 		this.props.login({email: "hello@guest.com", password: "hello@guest.com"})
-		.then(() => hashHistory.push('/'));
+		.then(() => hashHistory.push('/home'));
 	}
 
 	navLink() {

@@ -20,9 +20,14 @@ const Root = ({ store }) => {
     const _redirectIfLoggedIn = (nextState, replace) => {
       const currentUser = store.getState().session.currentUser;
       if (currentUser) {
-        replace('/');
+        replace('/home');
       }
     };
+
+    const redirectToLogin = (nextState, replace) => {
+      replace('/login');
+    };
+
 
 // REMEMBER TO ADD onEnter={_ensureLoggedIn} for new routes to redirect if not logged in.
   return (
@@ -32,8 +37,8 @@ const Root = ({ store }) => {
           onEnter={_redirectIfLoggedIn} />
         <Route path="/signup" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn}/>
-        <Route path="/" component={ App } onEnter={_ensureLoggedIn} />
-        <Route path="/logout" component={ App } onEnter={_ensureLoggedIn} />
+        <Route path="/" component={ SessionFormContainer } onEnter={redirectToLogin } />
+        <Route path="/home" component={ App } onEnter={_ensureLoggedIn} />
       </Router>
     </Provider>
   );
