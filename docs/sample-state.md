@@ -21,7 +21,7 @@
       title: "Gizmodo",
       description: "cool gadgets and stuff",
       url: "http://feeds.gawker.com/gizmodo/full",
-      favicon: "https://i.kinja-img.com/gawker-media/image/upload/s--O07tru6M--/c_fill,fl_progressive,g_center,h_80,q_80,w_80/fdj3buryz5nuzyf2k620.png",
+      favicon_url: "https://i.kinja-img.com/gawker-media/image/upload/s--O07tru6M--/c_fill,fl_progressive,g_center,h_80,q_80,w_80/fdj3buryz5nuzyf2k620.png",
       articles: {
         1: {
           id: 1,
