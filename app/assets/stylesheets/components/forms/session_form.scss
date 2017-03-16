@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   justify-content: flex-start;
   background-color: $blackish;
@@ -11,12 +12,13 @@
 
 .login-form-box {
   display:flex;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   align-items: center;
-  padding:30px;
+  padding:24px;
   margin: auto;
   flex-direction:column;
-  height: 500px;
+  height: 540px;
   width: 360px;
   background-color:#ffffff;
   border: 1px solid $gray;
@@ -28,6 +30,7 @@
     flex-direction: column;
     justify-content: center;
     input {
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 300px;
       height:50px;
