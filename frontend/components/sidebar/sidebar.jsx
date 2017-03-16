@@ -5,12 +5,10 @@ const Sidebar = () => {
 
 return(
   <div id="left" className="column">
-    <div className="top-left">
-       TEMP left Header
-     </div>
-    <aside className="bottom ">
+
+    <aside className="bottom sidebar">
       <ul>
-        <li>Today</li>
+        <li><img src="http://res.cloudinary.com/postreader/image/upload/v1489625801/logo_side_bar_icon_m5yywt.png" alt="PostReader Sidebar Logo" /> Popular feeds</li>
         <li>Read later</li>
         <li>Organize my feeds</li>
       </ul>
