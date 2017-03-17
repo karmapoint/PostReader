@@ -12,8 +12,8 @@ class Feeds extends React.Component {
 
   render () {
     return (
-    <section className="bottom content add-content">
-      <h2>All</h2>
+    <section className="bottom content feeds">
+      <h2><i className="fa fa-rss" aria-hidden="true"></i> All</h2>
 
     <p>Feed - Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
     <p>Feed</p>

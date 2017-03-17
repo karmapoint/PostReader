@@ -8,6 +8,7 @@ import Content from './content/content';
 import SessionFormContainer from './session_form/session_form_container';
 import AddContentContainer from './add_content/add_content_container';
 import FeedsContainer from './feeds/feeds_container';
+import FeedContainer from './feeds/feed_container';
 
 const Root = ({ store }) => {
 
@@ -41,7 +42,7 @@ const Root = ({ store }) => {
         <Route path="/home" component={ App } onEnter={_ensureLoggedIn} >
           <Route path="/add_content" component={ AddContentContainer }  onEnter={_ensureLoggedIn} />
           <Route path="/feeds" component={ FeedsContainer }  onEnter={_ensureLoggedIn} />
-          <Route path="/feeds/:id" component={ Content }  onEnter={_ensureLoggedIn}  />
+          <Route path="/feeds/:id" component={ FeedContainer }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/" component={ Content }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/:id"  component={ Content }  onEnter={_ensureLoggedIn}  />
           <IndexRoute  component={ Content }  onEnter={_ensureLoggedIn}  />
