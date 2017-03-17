@@ -97,3 +97,10 @@
     margin-right: 10px;
   }
 }
+
+.add-content-button:hover {
+  background-color: $black;
+}
+.add-content-button:focus {
+  outline:none;
+}

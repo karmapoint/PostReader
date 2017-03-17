@@ -1,17 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const AddContent = () => {
+class AddContent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <section className="bottom content">
-      <h1>Add Content</h1>
-      <p> form</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  componentDidMount(){
+    console.log(this.props.fetchFeeds());
+  }
+
+  render () {
+    return (
+    <section className="bottom content add-content">
+      <h2><i className="fa fa-rss" aria-hidden="true"></i> Add a Source</h2>
+
+      <form>
+        <input type="text" placeholder="Please enter the URL of an RSS feed" />
+      </form>
+
+      <p><strong><em>New to RSS? &nbsp;</em></strong> Here's <a href="http://www.digitaltrends.com/computing/how-to-use-rss/">a really simple explanation of Really Simple Syndication(RSS)</a>.</p>
+
     </section>
   );
+  }
 
-
-};
-
+}
 export default AddContent;

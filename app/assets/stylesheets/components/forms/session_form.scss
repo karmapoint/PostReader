@@ -39,6 +39,16 @@
       font-size: 17px;
       padding: 8px;
     }
+    input:focus{
+      border-color: $green;
+       box-shadow: 0 0 10px $green;
+      outline: none !important;
+    }
+    button:focus{
+      border-color: $green;
+       box-shadow: 0 0 10px $green;
+      outline: none !important;
+    }
 
     button {
       background-color: $green;
