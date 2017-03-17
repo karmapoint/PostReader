@@ -4,7 +4,7 @@ import FeedReducer from './feed_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
-  feed: FeedReducer
+  feeds: FeedReducer
 });
 
 export default RootReducer;
