@@ -1,4 +1,4 @@
-import * as FeedAPI from '../util/feed_ai_util';
+import * as FeedAPI from '../util/feed_api_util';
 
  export const RECEIVE_FEEDS = 'RECEIVE_FEEDS';
  export const RECEIVE_FEED = 'RECEIVE_FEED';

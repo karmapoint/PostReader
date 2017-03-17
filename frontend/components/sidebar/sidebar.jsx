@@ -8,7 +8,7 @@ return(
 
     <aside className="bottom sidebar">
       <ul className="nav">
-        <li><img src="http://res.cloudinary.com/postreader/image/upload/v1489632329/logo_side_bar_icon_tma2tz.png" alt="PostReader Sidebar Logo" /> Popular feeds</li>
+        <Link to="/"><li><img src="http://res.cloudinary.com/postreader/image/upload/v1489632329/logo_side_bar_icon_tma2tz.png" alt="PostReader Sidebar Logo" /> Popular feeds</li></Link>
         <li><i className="fa fa-bookmark-o" aria-hidden="true">
         </i> Read later</li>
         <li><i className="fa fa-cog" aria-hidden="true">
@@ -49,8 +49,10 @@ return(
       </section>
     </aside>
     <div className="add-content-container">
-      <button className="add-content-button">
+      <Link to="/add_content">
+        <button className="add-content-button">
         <i className="fa fa-plus" aria-hidden="true"></i>ADD CONTENT</button>
+      </Link>
     </div>
   </div>
 

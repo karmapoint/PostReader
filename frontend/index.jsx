@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+// REMOVE FOR PRODUCTION
   window.store = store;
 
 

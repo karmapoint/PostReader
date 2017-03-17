@@ -6,6 +6,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // react components
 import App from './app';
+import Content from './content/content';
 import SessionFormContainer from './session_form/session_form_container';
 
 const Root = ({ store }) => {
@@ -29,7 +30,6 @@ const Root = ({ store }) => {
     };
 
 
-// REMEMBER TO ADD onEnter={_ensureLoggedIn} for new routes to redirect if not logged in.
   return (
     <Provider store={store}>
       <Router history={ hashHistory }>
@@ -38,7 +38,14 @@ const Root = ({ store }) => {
         <Route path="/signup" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/" component={ SessionFormContainer } onEnter={redirectToLogin } />
-        <Route path="/home" component={ App } onEnter={_ensureLoggedIn} />
+        <Route path="/home" component={ App } onEnter={_ensureLoggedIn} >
+          <Route path="/add_content" component={ Content }  onEnter={_ensureLoggedIn} />
+          <Route path="/feeds"  component={ Content }  onEnter={_ensureLoggedIn} />
+          <Route path="/feeds/:id" component={ Content }  onEnter={_ensureLoggedIn}  />
+          <Route path="/collections/" component={ Content }  onEnter={_ensureLoggedIn}  />
+          <Route path="/collections/:id"  component={ Content }  onEnter={_ensureLoggedIn}  />
+          <IndexRoute  component={ Content }  onEnter={_ensureLoggedIn}  />
+        </Route>
       </Router>
     </Provider>
   );

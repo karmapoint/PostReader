@@ -9,8 +9,9 @@ const App = ({ children }) => (
     <SidebarContainer />
     <div className="column right-side">
       <HeaderContainer />
-      <Content />
-      { children }
+        <div id="right" >
+          { children }
+        </div>
     </div>
   </div>
 );
