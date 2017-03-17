@@ -1,13 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-
 // react router
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-
 // react components
 import App from './app';
 import Content from './content/content';
 import SessionFormContainer from './session_form/session_form_container';
+import AddContentContainer from './add_content/add_content_container';
 
 const Root = ({ store }) => {
 
@@ -39,7 +38,7 @@ const Root = ({ store }) => {
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/" component={ SessionFormContainer } onEnter={redirectToLogin } />
         <Route path="/home" component={ App } onEnter={_ensureLoggedIn} >
-          <Route path="/add_content" component={ Content }  onEnter={_ensureLoggedIn} />
+          <Route path="/add_content" component={ AddContentContainer }  onEnter={_ensureLoggedIn} />
           <Route path="/feeds"  component={ Content }  onEnter={_ensureLoggedIn} />
           <Route path="/feeds/:id" component={ Content }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/" component={ Content }  onEnter={_ensureLoggedIn}  />
