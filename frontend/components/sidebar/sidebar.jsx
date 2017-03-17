@@ -17,8 +17,8 @@ return(
       <section className="collections-and-feeds">
         <h2>FEEDS</h2>
         <ul>
-          <li className="collection-title">
-            <i className="fa fa-bars" aria-hidden="true"></i>All</li>
+          <Link to="/feeds" activeClassName="active"><li className="collection-title">
+            <i className="fa fa-bars" aria-hidden="true"></i>All</li></Link>
           <li className="collection-title">
             <i className="fa fa-angle-down" aria-hidden="true">
             </i>Collection1</li>

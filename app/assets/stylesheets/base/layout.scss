@@ -44,6 +44,7 @@ html,body {
   margin-right: auto;
   align-content: center;
   max-width:927px;
+  width: 100%;
 
   flex: 1 100%;
   flex-basis: auto;
@@ -106,7 +107,7 @@ html,body {
     margin-bottom: 24px;
     margin-top: 24px;
   }
-  
+
 }
 
 @media (min-width: 1400px) {

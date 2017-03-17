@@ -43,6 +43,12 @@
     background-color: $gray;
   }
 
+  .active {
+    background-color:$gray;
+  }
+
+
+
   li:hover + li:hover i {
     font-weight: bold;
   }
