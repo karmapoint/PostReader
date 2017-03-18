@@ -9,6 +9,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import AddContentContainer from './add_content/add_content_container';
 import FeedsContainer from './feeds/feeds_container';
 import FeedContainer from './feeds/feed_container';
+import Loading from './content/loading';
 
 const Root = ({ store }) => {
 
@@ -45,6 +46,7 @@ const Root = ({ store }) => {
           <Route path="/feeds/:id" component={ FeedContainer }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/" component={ Content }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/:id"  component={ Content }  onEnter={_ensureLoggedIn}  />
+          <Route path="/loading" component={ Loading } />
           <IndexRoute  component={ Content }  onEnter={_ensureLoggedIn}  />
         </Route>
       </Router>
