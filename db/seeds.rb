@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ActiveRecord::Base.transaction do
-  Users.destroy_all
+  User.destroy_all
   User.create(email:"hello@guest.com", password:"hello@guest.com")
 
-  Feeds.destroy_all
+  Feed.destroy_all
   feeds = Feed.create([
     {  "title"=>"Engadget RSS Feed",
         "description"=>"Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronic",
@@ -114,11 +114,11 @@ ActiveRecord::Base.transaction do
         "site_url"=>"https://www.buzzfeed.com",
         "favicon_url"=>"https://www.google.com/s2/favicons?domain_url=https://www.buzzfeed.com"
       },
-    {  "title"=>"BuzzFeed - Latest",
-        "description"=>"BuzzFeed, Find Your New Favorite Thing",
-        "feed_url"=>"https://www.buzzfeed.com/index.xml",
-        "site_url"=>"https://www.buzzfeed.com",
-        "favicon_url"=>"https://www.google.com/s2/favicons?domain_url=https://www.buzzfeed.com"
+    {  "title"=>"Bleacher Report - Front Page",
+        "description"=>"Bleacher Report - The open source sports network",
+        "feed_url"=>"http://bleacherreport.com/articles/feed",
+        "site_url"=>"http://bleacherreport.com/",
+        "favicon_url"=>"https://www.google.com/s2/favicons?domain_url=http://bleacherreport.com/"
       },
     {  "title"=>"Deadspin",
         "description"=>"Sports News without Access, Favor, or Discretion",
@@ -134,6 +134,7 @@ ActiveRecord::Base.transaction do
       },
     ])
 
+    p "Created #{Feed.count} feeds"
 end
 
 

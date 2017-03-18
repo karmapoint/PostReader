@@ -6,8 +6,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchFeeds: () => dispatch(fetchFeeds()),
-  createFeed: (feed) => dispatch(createFeed(feed))
+  createFeed: (feed_url) => dispatch(createFeed(feed_url))
 });
 
 
