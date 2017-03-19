@@ -9,17 +9,23 @@
   padding-right: 40px;
   margin-top: 50px;
 
-  input{
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  input[type=text]{
     display:inline-block;
     margin:0 auto;
-    width:90%;
+    width:75%;
     height: 48px;
     font-size: 18px;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left: 48px;
+    padding-left: 16px;
     padding-right: 10px;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     border: 1px solid $green;
   }
 
@@ -27,6 +33,24 @@
     border-color: $green;
      box-shadow: 0 0 10px $green;
     outline: none !important;
+  }
+
+  input[type=submit]{
+    display:inline-block;
+    width: 25%;
+    height: 66px;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid $green;
+    color:white;
+    background-color: $green;
+  }
+  input[type=submit]:hover{
+    color:$green;
+    background-color: #eeeeee;
   }
 
   h2 {

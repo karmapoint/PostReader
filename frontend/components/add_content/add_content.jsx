@@ -7,14 +7,17 @@ class AddContent extends React.Component {
     this.state = {
       feed_url: ""
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.errors = this.errors.bind(this);
   }
+
+
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.createFeed(this.state.feed_url)
-    .then(data => this.props.router.push(`/feeds/${data.feed.id}`));
+    .then(data => this.props.router.push(`/feeds/${data.feed.id}`)
+    .catch(this.errors));
   }
 
   update() {
@@ -37,9 +40,10 @@ class AddContent extends React.Component {
     <section className="bottom content add-content">
       <h2><i className="fa fa-rss" aria-hidden="true"></i> Add a Source</h2>
 
-      <form onSubmit={this.hanldeSubmit}>
-        <input type="text" placeholder="Please enter the URL of an RSS feed"
-          value={this.state.feed_url} onChange={this.update()} onKeyPress={this.handleSubmit}/>
+      <form onSubmit={this.hanldeSubmit} id="search-for-feed">
+        <input type="text" placeholder="Enter the full URL of an RSS feed"
+          value={this.state.feed_url} onChange={this.update()} />
+        <input type="submit" value="Add Feed" onClick={this.handleSubmit} />
       </form>
 
       <p><strong><em>New to RSS? &nbsp;</em></strong> Here's <a href="http://www.digitaltrends.com/computing/how-to-use-rss/" target="_blank">a really simple explanation of Really Simple Syndication(RSS)</a>.</p>

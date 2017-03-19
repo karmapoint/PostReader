@@ -13,8 +13,6 @@ export const fetchFeed = (id) => (
 );
 
 export const createFeed = (feed_url) => {
-  console.log("hitting API");
-  console.log(feed_url);
   return (
   $.ajax({
     method: 'POST',
