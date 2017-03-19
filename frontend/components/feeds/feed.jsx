@@ -15,22 +15,20 @@ class Feed extends React.Component {
 
   renderArticle(article){
     return (
-      <article key={article.id}>
-        <h3><a href={article.url}>{article.title}</a></h3>
-        <p>{article.published}</p>
+      <a href={article.url} key={article.id}>
+      <article >
+        <h3 className="articleTitle">{article.title}</h3>
+        <p className="date">{article.published}</p>
         <p>{article.image}</p>
         <div dangerouslySetInnerHTML={{__html: article.summary}} />
-
-
-
       </article>
+      </a>
     );
   }
 
 
   render () {
     let feed = this.props.feeds[this.props.routeParams.id];
-    console.log(feed);
     if (isEmpty(this.props.feeds)){
       return (
           <section className="bottom content feeds">
