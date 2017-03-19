@@ -1,5 +1,11 @@
 .feeds {
 
+  .favicon {
+    width: 16px;
+    margin-right: 10px;
+  }
+
+
   h2 {
     font-weight: 600;
     font-size: 30px;
@@ -13,9 +19,13 @@
     h2 {
       font-weight: 600;
       font-size: 30px;
-      margin-bottom:60px;
+      margin-bottom:20px;
       margin-top: 24px;
       color: $black;
+    }
+
+    .description {
+      margin-bottom:50px;
     }
 
     h3 {
@@ -42,10 +52,6 @@
       font-size:16px;
     }
 
-    .favicon {
-      width: 16px;
-      margin-right: 10px;
-    }
 
     article {
       clear: both;
@@ -55,6 +61,15 @@
       line-height: 1.4;
       font-weight: 300;
       color: $light-gray;
+
+      .date {
+        font-style: italic;
+        font-size: 12px;
+        font-weight:300;
+        color: $light-gray;
+
+
+      }
 
       h3 {
         font-size:16px;

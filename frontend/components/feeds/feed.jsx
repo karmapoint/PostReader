@@ -17,8 +17,7 @@ class Feed extends React.Component {
     return (
       <a href={article.url} key={article.id}>
       <article >
-        <h3 className="articleTitle">{article.title}</h3>
-        <p className="date">{article.published}</p>
+        <h3 className="articleTitle">{article.title} <span className="date">{article.published}</span></h3>
         <p>{article.image}</p>
         <div dangerouslySetInnerHTML={{__html: article.summary}} />
       </article>
@@ -36,14 +35,14 @@ class Feed extends React.Component {
           </section>
         );
     } else {
-
+      console.log(feed.articles);
     return (
     <section className="bottom content feeds">
       <section className="feedDisplay">
         <h2><img src={feed.favicon_url} className="favicon" alt={feed.title} /><a href={feed.site_url} target="_blank">
           {feed.title}
         </a></h2>
-      <p>{feed.description}</p>
+      <p className="description">{feed.description}</p>
 
 
 

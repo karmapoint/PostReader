@@ -24,12 +24,23 @@ class ApplicationController < ActionController::Base
     feed.entries.each do |article|
       author = article.author ? article.author : "staff writer"
       summary = article.summary ? article.summary : ""
+
+      pub_date = Date.parse(article.published.to_s.slice(0...10))
+      publish_date_diff = (Date.current - pub_date).to_s[0].to_i
+      if publish_date_diff < 1
+        pub = "- published today"
+      elsif publish_date_diff == 1
+        pub = "- published 1 day ago"
+      else
+        pub = "- published #{publish_date_diff} days ago"
+      end
+
       post = {
         id: id,
         title: article.title,
         author: author,
         url: article.url,
-        published: article.published,
+        published: pub,
         image: article.image,
         summary: summary,
         content: article.content
