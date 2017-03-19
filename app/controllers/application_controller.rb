@@ -1,9 +1,21 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :prep_feed
 
   private
+
+
+  def prep_feed(feed_url)
+    feed = Feedjira::Feed.fetch_and_parse feed_url
+    @feedAttributes = {
+      "title"=> feed.title,
+       "description"=> feed.title,
+       "feed_url"=> feed_url,
+       "site_url"=> feed.url,
+       "favicon_url"=>"https://www.google.com/s2/favicons?domain_url=${feed.url}"
+    }
+  end
 
   def current_user
     return nil unless session[:session_token]

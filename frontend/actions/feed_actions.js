@@ -15,9 +15,9 @@ const receiveFeed = feed => ({
   feed
 });
 
-const createFeed = feed => ({
+const createFeed = feed_url => ({
   type: CREATE_FEED,
-  feed
+  feed_url
 });
 
 export const fetchFeeds = () => dispatch => (
@@ -28,6 +28,6 @@ export const fetchFeed = (id) => dispatch => (
   FeedAPI.fetchFeed(id).then(id => dispatch(receiveFeed(id)))
 );
 
-export const createFeeds = (feed) => dispatch => (
-  FeedAPI.createFeeds(feed).then(feed => dispatch(receiveFeed(feed)))
+export const makeFeed = (feed_url) => dispatch => (
+  FeedAPI.createFeed(feed_url).then(feed => dispatch(receiveFeed(feed)))
 );

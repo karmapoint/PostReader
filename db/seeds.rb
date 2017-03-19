@@ -155,8 +155,6 @@ end
 # /Film
 #
 # Sports:
-#
-# Bleacher Report
 # Sports Illustrated
 # Yahoo! Sports
 # Grantland: Home Page

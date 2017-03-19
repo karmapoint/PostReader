@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import AddContent from './add_content';
-import { fetchFeeds, createFeed } from '../../actions/feed_actions';
+import { makeFeed } from '../../actions/feed_actions';
 
-const mapStateToProps = state => ({
+const mapStateToProps = ({ errors }) => ({
+  errors
 });
 
 const mapDispatchToProps = dispatch => ({
-  createFeed: (feed_url) => dispatch(createFeed(feed_url))
+  createFeed: (feed_url) => dispatch(makeFeed(feed_url))
 });
 
 
