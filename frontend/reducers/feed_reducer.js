@@ -1,6 +1,19 @@
 import { merge } from 'lodash';
 import { RECEIVE_FEEDS, RECEIVE_FEED, CREATE_FEED } from '../actions/feed_actions';
 
+const defaultFeed = {
+  1: {
+    id: "",
+    title: "",
+    description: "",
+    site_url: "",
+    feed_url: "",
+    favicon_url: "",
+    articles: []
+  }
+};
+
+
 
 const FeedReducer = (state = {}, action) => {
   Object.freeze(state);

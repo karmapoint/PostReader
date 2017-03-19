@@ -20,7 +20,6 @@ class Feeds extends React.Component {
           {feed.title}
         </Link><a href={feed.site_url} target="_blank"><i className="fa fa-external-link" aria-hidden="true"></i></a></h3>
         <p>{feed.description}</p>
-        <p> Articles will go here... </p>
       </section>
     );
   }
