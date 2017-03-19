@@ -17,6 +17,10 @@
  /*// CSS RESET*/
 @import "base/reset.scss";
 
+/*// ICONS*/
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 /*// CORE*/
 @import "base/colors.scss";
 @import "base/layout.scss";

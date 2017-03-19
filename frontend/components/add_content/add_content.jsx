@@ -7,7 +7,7 @@ class AddContent extends React.Component {
   }
 
   componentDidMount(){
-    console.log(this.props.fetchFeeds());
+
   }
 
   render () {
