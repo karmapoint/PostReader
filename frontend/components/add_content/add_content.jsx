@@ -11,13 +11,15 @@ class AddContent extends React.Component {
     this.errors = this.errors.bind(this);
   }
 
-
+  ComponentDidUpdate(){
+    debugger
+  }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.createFeed(this.state.feed_url)
     .then(data => this.props.router.push(`/feeds/${data.feed.id}`)
-    .catch(this.errors));
+    .fail(this.errors));
   }
 
   update() {
@@ -25,7 +27,9 @@ class AddContent extends React.Component {
   }
 
   errors() {
+    console.log(this.state.errors);
     if (this.props.errors) {
+
       return (
         this.props.errors.map(error => {
           return ( <h3 className="error" key={error}>{error}</h3>);

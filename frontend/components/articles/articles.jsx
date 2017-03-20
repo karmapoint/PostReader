@@ -4,11 +4,19 @@ import { isEmpty } from 'lodash';
 import Loading from '../content/loading';
 import { Article } from './article';
 
+const toggle = (id) => {
+  let target = "#"+id+" .full-article";
+  let original = "#preview"+id;
+  $(target).toggleClass("hidden");
+  $(original).toggleClass("hidden");
+};
+
+
 const renderArticle = (article) => {
 
   return (
-    <div key={article.id}>
-      <a href={article.url}  target="_blank">
+    <div key={article.id} id={article.id}>
+      <a onClick={() => toggle(article.id)} id={"preview" + article.id}>
       <article >
         <img src={article.image} className="articlePreviewImage"/>
         <h3 className="articleTitle">{article.title} <span className="date">{article.published}</span></h3>

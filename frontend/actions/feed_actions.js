@@ -3,6 +3,7 @@ import * as FeedAPI from '../util/feed_api_util';
  export const RECEIVE_FEEDS = 'RECEIVE_FEEDS';
  export const RECEIVE_FEED = 'RECEIVE_FEED';
  export const CREATE_FEED = 'CREATE_FEED';
+ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 
 const receiveFeeds = feeds => ({
@@ -20,6 +21,11 @@ const createFeed = feed_url => ({
   feed_url
 });
 
+export const receiveErrors = errors => ({
+  type: RECEIVE_ERRORS,
+  errors
+});
+
 export const fetchFeeds = () => dispatch => (
   FeedAPI.fetchFeeds().then(feeds => dispatch(receiveFeeds(feeds)))
 );
@@ -29,5 +35,7 @@ export const fetchFeed = (id) => dispatch => (
 );
 
 export const makeFeed = (feed_url) => dispatch => (
-  FeedAPI.createFeed(feed_url).then(feed => dispatch(receiveFeed(feed)))
+  FeedAPI.createFeed(feed_url).then(feed => { dispatch(receiveFeed(feed));
+  return feed;
+}).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
