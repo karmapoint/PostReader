@@ -29,7 +29,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def get_image(article)
+  def get_image(source)
+    suppress(Exception) do
+      /<img.+src="([^"]+)"/.match(source)[1]
+    end
   end
 
   def get_summary(article)
@@ -47,6 +50,17 @@ class ApplicationController < ActionController::Base
       author = article.author ? article.author : "staff writer"
       summary = article.summary ? get_summary(article) : ""
       pub = get_date(article)
+      if article.methods.include?(:image)
+        if article.image
+          img = article.image
+        elsif get_image(article.summary)
+          img = get_image(article.summary)
+        else
+          img = get_image(article.content)
+        end
+      else
+        img = nil
+      end
 
       post = {
         id: id,
@@ -54,7 +68,7 @@ class ApplicationController < ActionController::Base
         author: author,
         url: article.url,
         published: pub,
-        image: article.image,
+        image: img,
         summary: summary,
         content: article.content
       }

@@ -6,11 +6,9 @@ import Loading from '../content/loading';
 const renderArticle = (article) => {
 
   return (
-    <a href={article.url} key={article.id}>
+    <a href={article.url} key={article.id} target="_blank">
     <article >
       <h3 className="articleTitle">{article.title} <span className="date">{article.published}</span></h3>
-      <p>{article.image}</p>
-      <div dangerouslySetInnerHTML={{__html: article.summary}} />
     </article>
     </a>
   );
@@ -18,7 +16,7 @@ const renderArticle = (article) => {
 
 
 
-export  const Articles = ({ feed, router }) => {
+export  const ArticlesList = ({ feed, router }) => {
   if (isEmpty(feed.articles)){
     return (
       <div>
@@ -26,7 +24,6 @@ export  const Articles = ({ feed, router }) => {
       </div>
     );
   } else {
-    console.log(feed.articles);
     return (
       <section>
       {
@@ -34,8 +31,7 @@ export  const Articles = ({ feed, router }) => {
             key => renderArticle(feed.articles[key])
           )
         }
-
-      </section>
+        </section>
     );
   }
 };
