@@ -33,12 +33,16 @@
     }
 
     .subscribe-button {
-      margin-right: 20px;
+      float:right;
       border: 1px solid $green;
+      border-radius: 4px;
       background: #ffffff;
-      border-radius: 8px;
       color: $green;
-      margin-left: 20px;
+      font-size: 12px;
+      height:40px;
+      text-transform: uppercase;
+      padding: 10px 17px 10px 17px;
+      margin-top: -13px;
 
     }
     .subscribe-button:hover {
