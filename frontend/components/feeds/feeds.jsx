@@ -38,7 +38,7 @@ class Feeds extends React.Component {
 
       return (
       <section className="bottom content feeds">
-        <h2><i className="fa fa-rss" aria-hidden="true"></i> All</h2>
+        <h2 className="sectionTitle"><i className="fa fa-rss" aria-hidden="true"></i> All</h2>
 
 
         {
