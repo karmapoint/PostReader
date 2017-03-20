@@ -8,8 +8,16 @@ class AddContent extends React.Component {
       feed_url: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    let errors = (<div></div>);
   }
 
+  componentWillUnmount(){
+    this.removeError();
+  }
+
+  removeError(){
+    this.errors = (<div></div>);
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -24,9 +32,9 @@ class AddContent extends React.Component {
 
   render () {
 
-    let errors = (<div></div>);
+
     if (this.props.errors) {
-      errors = (<h3><i className="fa fa-exclamation-triangle" aria-hidden="true"></i> Invalid RSS feed url</h3>);
+      this.errors = (<h3><i className="fa fa-exclamation-triangle" aria-hidden="true"></i> Invalid RSS feed url</h3>);
     }
     return (
       <section className="bottom content add-content">
@@ -40,7 +48,7 @@ class AddContent extends React.Component {
 
         <p><strong><em>New to RSS? &nbsp;</em></strong> Here's <a href="http://www.digitaltrends.com/computing/how-to-use-rss/" target="_blank">a really simple explanation of Really Simple Syndication(RSS)</a>.</p>
 
-        {errors}
+        {this.errors}
 
       </section>
     );
