@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import AddContent from './add_content';
 import { makeFeed } from '../../actions/feed_actions';
 
-const mapStateToProps = ({ errors }) => ({
-  errors
+const mapStateToProps = ({ feeds }) => ({
+  errors: feeds.errors
 });
 
 const mapDispatchToProps = dispatch => ({

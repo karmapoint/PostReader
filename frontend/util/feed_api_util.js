@@ -13,11 +13,10 @@ export const fetchFeed = (id) => (
 );
 
 export const createFeed = (feed_url) => {
-  return (
-  $.ajax({
+
+  return $.ajax({
     method: 'POST',
     url: 'api/feeds',
     data: { feed_url }
-  })
-);
+  });
 };

@@ -30,7 +30,7 @@ class Feed extends React.Component {
       <section className="feedDisplay">
         <h2 className="feedTitle"><img src={feed.favicon_url} className="favicon" alt={feed.title} /><a href={feed.site_url} target="_blank">
           {feed.title}
-        </a></h2>
+        </a><button className="subscribe-button">Add to collection</button></h2>
       <p className="description">{feed.description}</p>
 
       <Articles feed={feed}/>

@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { RECEIVE_FEEDS, RECEIVE_FEED, CREATE_FEED } from '../actions/feed_actions';
+import { RECEIVE_FEEDS, RECEIVE_FEED, CREATE_FEED, RECEIVE_FEED_ERRORS } from '../actions/feed_actions';
 
 const defaultFeed = {
   1: {
@@ -27,6 +27,9 @@ const FeedReducer = (state = {}, action) => {
       return merge({}, state, newFeed);
     case CREATE_FEED:
       return merge({}, action.feed);
+    case RECEIVE_FEED_ERRORS:
+      newState.errors = action.errors;
+      return newState;
     default:
       return state;
   }

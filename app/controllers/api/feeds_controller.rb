@@ -5,12 +5,19 @@ class Api::FeedsController < ApplicationController
   end
 
   def create
-    prep_feed(feed_params["feed_url"])
-    @feed = Feed.new(@feed_attributes)
-    if @feed.save
+    if Feed.exists?(feed_url: feed_params["feed_url"])
+      @feed = Feed.find_by(feed_url: feed_params["feed_url"])
       render :show
     else
-      render json: @feed.errors.full_messages, status:422
+      prep_feed(feed_params["feed_url"])
+      if @feed_attributes["feed_url"] == "parse error"
+        render :add_content_error, status: :unprocessable_entity
+      else
+        @feed = Feed.new(@feed_attributes)
+        if @feed.save
+          render :show
+        end
+      end
     end
   end
 
@@ -29,15 +36,25 @@ class Api::FeedsController < ApplicationController
   end
 
   def prep_feed(feed_url)
-    feed = Feedjira::Feed.fetch_and_parse feed_url
-    favicon = "https://www.google.com/s2/favicons?domain_url=".concat(feed.url)
-    @feed_attributes = {
-      "title"=> feed.title,
-       "description"=> feed.title,
-       "feed_url"=> feed_url,
-       "site_url"=> feed.url,
-       "favicon_url"=> favicon
-    }
+    #
+    # Do a begin/rescue block listening for Feedjira::NoParserAvailable - rescue with default "" attributes
+
+    begin
+      feed = Feedjira::Feed.fetch_and_parse feed_url
+      favicon = "https://www.google.com/s2/favicons?domain_url=".concat(feed.url)
+      @feed_attributes = {
+        "title"=> feed.title,
+         "description"=> feed.title,
+         "feed_url"=> feed_url,
+         "site_url"=> feed.url,
+         "favicon_url"=> favicon
+      }
+    rescue
+      # should add this condition to rescue Feedjira::NoParserAvailable
+      @feed_attributes ={
+        "feed_url" => "parse error"
+      }
+    end
   end
 
 end

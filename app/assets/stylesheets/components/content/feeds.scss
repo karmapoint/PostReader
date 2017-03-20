@@ -32,6 +32,22 @@
       color: $black;
     }
 
+    .subscribe-button {
+      margin-right: 20px;
+      border: 1px solid $green;
+      background: #ffffff;
+      border-radius: 8px;
+      color: $green;
+      margin-left: 20px;
+
+    }
+    .subscribe-button:hover {
+      color: #ffffff;
+      border-color: transparent;
+      background-color: $green;
+    }
+
+
     .articlePreviewImage {
       width: 130px;
       border-radius: 4px;
