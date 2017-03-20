@@ -1,12 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../header/header_container';
 
-// const subRoute = () => {
-//   const section = window.location.hash.slice(2);
-//   console.log(section);
-// };
-
-
 
 const Content = () => {
   return (

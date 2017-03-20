@@ -10,10 +10,9 @@
 * The ability to subscribe to RSS **feeds** and view a list of articles within them.
 * The ability to select and view an individual **article**.
 * The ability to organize groups of feeds into **collections**.
-* The ability to track what articles are **read** and unread.
+* The ability to mark articles to be **read later**.
 
 If time allows, the following bonus features will be added:
-* BONUS: The ability to mark articles to be **read later**.
 * BONUS: The ability to **share posts** via Facebook, Twitter, and Email.
 * BONUS: The ability to **search the ** of all articles that have been read inside of all collections.
 * BONUS: The ability to **search for new feeds** from within the app.
@@ -71,9 +70,9 @@ If time allows, the following bonus features will be added:
 #### (.5 days)
 **Objective:** Basic editing of categories (remove feeds/rename).
 
-### Phase 7: Add reads
+### Phase 7: Add ability to save articles to be read later
 #### (.5 days)
-**Objective:** Unread items display next to each collection and feed in the sidebar.
+**Objective:** Saved articles will be added to the database and appear from that link on the sidebar.
 
 ### Phase 8: Homepage content and CSS improvements
 #### (1 day)
@@ -81,8 +80,7 @@ If time allows, the following bonus features will be added:
 
 ---
 
-* BONUS: Search user's articles (time permitting)
-* BONUS: Read later (time permitting)
+* BONUS: Search user's saved articles (time permitting)
 * BONUS: Share posts (time permitting)
 * BONUS: Drag & Drop functionality for category edit
 * BONUS: Search for new feeds (time permitting)
