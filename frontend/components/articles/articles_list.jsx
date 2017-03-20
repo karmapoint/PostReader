@@ -34,7 +34,7 @@ export  const Articles = ({ feed, router }) => {
             key => renderArticle(feed.articles[key])
           )
         }
-        <p>END OF FEED</p>
+
       </section>
     );
   }

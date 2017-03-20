@@ -17,23 +17,36 @@ class ApplicationController < ActionController::Base
     }
   end
 
+  def get_date(article)
+    pub_date = Date.parse(article.published.to_s.slice(0...10))
+    publish_date_diff = (Date.current - pub_date).to_s[0].to_i
+    if publish_date_diff < 1
+      return "- published today"
+    elsif publish_date_diff == 1
+      return "- published 1 day ago"
+    else
+      return "- published #{publish_date_diff} days ago"
+    end
+  end
+
+  def get_image(article)
+  end
+
+  def get_summary(article)
+    stripped = ActionView::Base.full_sanitizer.sanitize(article.summary)
+    stripped.slice(0...255).concat("...")
+
+  end
+
+
   def get_articles(feed_url)
     feed = Feedjira::Feed.fetch_and_parse feed_url
     @articles = {}
     id = 1
     feed.entries.each do |article|
       author = article.author ? article.author : "staff writer"
-      summary = article.summary ? article.summary : ""
-
-      pub_date = Date.parse(article.published.to_s.slice(0...10))
-      publish_date_diff = (Date.current - pub_date).to_s[0].to_i
-      if publish_date_diff < 1
-        pub = "- published today"
-      elsif publish_date_diff == 1
-        pub = "- published 1 day ago"
-      else
-        pub = "- published #{publish_date_diff} days ago"
-      end
+      summary = article.summary ? get_summary(article) : ""
+      pub = get_date(article)
 
       post = {
         id: id,

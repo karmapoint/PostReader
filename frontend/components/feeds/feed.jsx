@@ -36,7 +36,7 @@ class Feed extends React.Component {
       <Articles feed={feed}/>
 
 
-      <p>END OF FEED</p>
+
 
       </section>
     </section>
