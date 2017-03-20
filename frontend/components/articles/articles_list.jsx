@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { isEmpty } from 'lodash';
 import Loading from '../content/loading';
+import Article from './article';
 
 const renderArticle = (article) => {
 

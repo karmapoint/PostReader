@@ -41,6 +41,14 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def get_content(article)
+    if article.content
+      full_content = article.content
+    else
+      full_content = article.summary
+    end
+  end
+
 
   def get_articles(feed_url)
     feed = Feedjira::Feed.fetch_and_parse feed_url
@@ -62,6 +70,12 @@ class ApplicationController < ActionController::Base
         img = nil
       end
 
+      if article.content
+        full_content = article.content
+      else
+        full_content = article.summary
+      end
+
       post = {
         id: id,
         title: article.title,
@@ -70,7 +84,7 @@ class ApplicationController < ActionController::Base
         published: pub,
         image: img,
         summary: summary,
-        content: article.content
+        content: full_content
       }
       @articles[id] = post
       id += 1

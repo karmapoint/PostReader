@@ -2,17 +2,21 @@ import React from 'react';
 import { Link } from 'react-router';
 import { isEmpty } from 'lodash';
 import Loading from '../content/loading';
+import { Article } from './article';
 
 const renderArticle = (article) => {
 
   return (
-    <a href={article.url} key={article.id} target="_blank">
-    <article >
-      <img src={article.image} className="articlePreviewImage"/>
-      <h3 className="articleTitle">{article.title} <span className="date">{article.published}</span></h3>
-      <div dangerouslySetInnerHTML={{__html: article.summary}} />
-    </article>
-    </a>
+    <div key={article.id}>
+      <a href={article.url}  target="_blank">
+      <article >
+        <img src={article.image} className="articlePreviewImage"/>
+        <h3 className="articleTitle">{article.title} <span className="date">{article.published}</span></h3>
+        <div dangerouslySetInnerHTML={{__html: article.summary}} className="preview" />
+      </article>
+      </a>
+      <Article article={article} />
+    </div>
   );
 };
 

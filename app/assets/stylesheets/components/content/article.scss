@@ -1,0 +1,33 @@
+.full-article {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $near_white;
+  padding: 20px;
+
+  h2:hover {
+    color: $light-gray;
+  }
+  .close-button {
+    font-size: 20px;
+    color: $blackish;
+    text-align: right;
+  }
+  .close-button:hover {
+    color: $light-gray;
+  }
+  .article-content {
+    color:$gray;
+    font-size: 16px;
+
+    img:first-child {
+      width:94%;
+      margin: 20px;
+
+    }
+  }
+
+}
+
+.feedflare {
+  display:none;
+}
