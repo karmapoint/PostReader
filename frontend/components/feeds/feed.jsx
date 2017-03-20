@@ -28,7 +28,7 @@ class Feed extends React.Component {
     return (
     <section className="bottom content feeds">
       <section className="feedDisplay">
-        <h2><img src={feed.favicon_url} className="favicon" alt={feed.title} /><a href={feed.site_url} target="_blank">
+        <h2 className="feedTitle"><img src={feed.favicon_url} className="favicon" alt={feed.title} /><a href={feed.site_url} target="_blank">
           {feed.title}
         </a></h2>
       <p className="description">{feed.description}</p>

@@ -5,13 +5,18 @@
   border: 1px solid $near_white;
   padding: 20px;
 
+h2.articleTitle {
+    margin-top:0px;
+  }
+
   h2:hover {
     color: $light-gray;
   }
-  a .close-button {
+  .close-button {
     font-size: 20px;
     color: $blackish;
     text-align: right;
+    float:right;
   }
   .close-button:hover {
     color: $light-gray;
