@@ -36,8 +36,6 @@ class Api::FeedsController < ApplicationController
   end
 
   def prep_feed(feed_url)
-    #
-    # Do a begin/rescue block listening for Feedjira::NoParserAvailable - rescue with default "" attributes
 
     begin
       feed = Feedjira::Feed.fetch_and_parse feed_url
