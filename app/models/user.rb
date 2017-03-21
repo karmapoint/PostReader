@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
 	has_many :collections
 
+
 	def password= password
 		self.password_digest = BCrypt::Password.create(password)
 		@password = password

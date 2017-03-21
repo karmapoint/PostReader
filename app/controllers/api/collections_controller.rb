@@ -1,4 +1,4 @@
-class Api::FeedsController < ApplicationController
+class Api::CollectionsController < ApplicationController
 
   def index
     @collections = Collection.all
@@ -21,7 +21,7 @@ class Api::FeedsController < ApplicationController
     @collection = Collection.find(params[:id])
     if @collection.update(collection_params)
       render :show
-    end 
+    end
 
   end
 
