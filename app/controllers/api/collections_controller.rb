@@ -7,7 +7,7 @@ class Api::FeedsController < ApplicationController
   def create
     @collection = Collection.new(collection_params)
     if @collection.save
-      render "api/collections/show"
+      render :show
     else
       render json: @collection.errors.full_messages, status: :unprocessable_entity
     end
@@ -20,7 +20,7 @@ class Api::FeedsController < ApplicationController
   def update
     @collection = Collection.find(params[:id])
     if @collection.update(collection_params)
-      render :show 
+      render :show
 
   end
 
