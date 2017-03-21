@@ -34,7 +34,7 @@ class AddContent extends React.Component {
 
 
     if (this.props.errors) {
-      this.errors = (<h3><i className="fa fa-exclamation-triangle" aria-hidden="true"></i> Invalid RSS feed url</h3>);
+      this.errors = (<h3><i className="fa fa-exclamation-triangle alert" aria-hidden="true"></i> Invalid RSS feed url</h3>);
     }
     return (
       <section className="bottom content add-content">

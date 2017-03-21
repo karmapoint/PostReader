@@ -13,6 +13,9 @@
     display: flex;
     flex-direction: row;
   }
+  .alert {
+    color: red;
+  }
 
   input[type=text]{
     display:inline-block;
