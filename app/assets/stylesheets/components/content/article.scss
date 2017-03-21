@@ -12,15 +12,21 @@ h2.articleTitle {
   h2:hover {
     color: $light-gray;
   }
-  .close-button {
+  .article-button {
     font-size: 20px;
     color: $blackish;
     text-align: right;
     float:right;
   }
-  .close-button:hover {
+  .article-button:hover {
     color: $light-gray;
   }
+
+  i.close-button {
+    font-size:24px;
+    margin-top: -5px;
+  }
+
   .article-content {
     color:$gray;
     font-size: 16px;
