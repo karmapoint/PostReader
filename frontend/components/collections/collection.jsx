@@ -31,6 +31,13 @@ class Collection extends React.Component {
           {collection.name}
         </h2>
 
+      {
+        this.props.collections[1].feeds.map(
+          feed => (
+            <Articles feed={feed} key={feed.title + feed.id}/>
+          )
+        )
+      }
 
       </section>
     </section>

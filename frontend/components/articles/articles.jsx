@@ -12,14 +12,14 @@ const toggle = (id) => {
 };
 
 
-const renderArticle = (article) => {
+const renderArticle = (article, feed) => {
 
   return (
     <div key={article.id} id={article.id}>
       <a onClick={() => toggle(article.id)} id={"preview" + article.id}>
       <article >
         <img src={article.image} className="articlePreviewImage"/>
-        <h3 className="articleTitle">{article.title} <span className="date">{article.published}</span></h3>
+        <h3 className="articleTitle">{article.title} <br /><span className="date">{article.published} on {feed.title}</span></h3>
         <div dangerouslySetInnerHTML={{__html: article.summary}} className="preview" />
       </article>
       </a>
@@ -42,7 +42,7 @@ export  const Articles = ({ feed, router }) => {
       <section>
       {
           Object.keys(feed.articles).map(
-            key => renderArticle(feed.articles[key])
+            key => renderArticle(feed.articles[key], feed)
           )
         }
         </section>
