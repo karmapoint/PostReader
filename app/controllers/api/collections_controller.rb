@@ -21,6 +21,7 @@ class Api::FeedsController < ApplicationController
     @collection = Collection.find(params[:id])
     if @collection.update(collection_params)
       render :show
+    end 
 
   end
 
