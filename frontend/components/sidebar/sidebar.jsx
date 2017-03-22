@@ -16,20 +16,29 @@ class Sidebar extends React.Component {
   renderCollectionNav(key){
     let collection = this.props.collections[key];
     return (
+      <ul className="collection-list">
       <li className="collection-title" key={collection.name + key}>
         <i className="fa fa-angle-right" aria-hidden="true"/>
         <Link to={`/collections/${collection.id}`}>
           {collection.name}
         </Link>
       </li>
+
+      {
+        collection.feeds.map(
+          feed => (
+            <Link to={`/feeds/${feed.id}`} >
+              <li className="feed-title">
+                <img src={feed.favicon_url} />
+                {feed.title}
+              </li>
+            </Link>
+          )
+        )
+      }
+      </ul>
     );
-
   }
-
-  //     <li className="feed-title">Feed 1</li>
-  //     <li className="feed-title">Feed 2</li>
-  //     <li className="feed-title">Feed 3</li>
-
 
   render () {
 
