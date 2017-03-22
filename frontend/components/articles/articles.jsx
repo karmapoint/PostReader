@@ -14,16 +14,18 @@ const toggle = (id) => {
 
 const renderArticle = (article, feed) => {
 
+  let identifier = (feed.id + "FEED-ARTICLE" + article.id);
+
   return (
-    <div key={article.id} id={article.id}>
-      <a onClick={() => toggle(article.id)} id={"preview" + article.id}>
+    <div key={identifier} id={identifier}>
+      <a onClick={() => toggle(identifier)} id={"preview" + identifier}>
       <article >
         <img src={article.image} className="articlePreviewImage"/>
         <h3 className="articleTitle">{article.title} <br /><span className="date">{article.published} on {feed.title}</span></h3>
         <div dangerouslySetInnerHTML={{__html: article.summary}} className="preview" />
       </article>
       </a>
-      <Article article={article} />
+      <Article article={article} identifier={identifier} />
     </div>
   );
 };

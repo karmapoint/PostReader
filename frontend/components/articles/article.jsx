@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { isEmpty } from 'lodash';
 import Loading from '../content/loading';
 
-const renderFullArticle = (article) => {
+const renderFullArticle = (article, identifier) => {
 
   const toggle = (id) => {
     let target = "#"+id+" .full-article";
@@ -15,7 +15,7 @@ const renderFullArticle = (article) => {
   return (
     <article className="hidden full-article " >
       <ul>
-        <li><a onClick={() => toggle(article.id)} id={"preview" + article.id}><i className="fa fa-times article-button close-button" aria-hidden="true"></i></a></li>
+        <li><a onClick={() => toggle(identifier)} id={"preview" + article.id}><i className="fa fa-times article-button close-button" aria-hidden="true"></i></a></li>
         <li><a href="#"><i className="fa fa-bookmark-o article-button" aria-hidden="true"></i></a></li>
         <li><a href={article.url} key={article.id} target="_blank"><i className="fa fa-external-link article-button" aria-hidden="true"></i></a></li>
       </ul>
@@ -30,11 +30,11 @@ const renderFullArticle = (article) => {
 
 
 
-export const Article = ({ article, router }) => {
+export const Article = ({ article, identifier, router }) => {
   return (
     <section >
       {
-        renderFullArticle(article)
+        renderFullArticle(article, identifier)
       }
     </section>
   );
