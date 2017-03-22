@@ -13,6 +13,12 @@ class Collection extends React.Component {
     this.props.fetchCollection(this.props.routeParams.id);
   }
 
+  componentWillReceiveProps(newProps){
+    if (newProps.routeParams.id !== this.props.routeParams.id) {
+    this.props.fetchCollection(newProps.routeParams.id);
+    }
+  }
+
 
 
   render () {
@@ -24,7 +30,7 @@ class Collection extends React.Component {
           </section>
         );
     } else {
-  
+
     return (
     <section className="bottom content feeds">
       <section className="feedDisplay">
