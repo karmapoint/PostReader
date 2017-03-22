@@ -3,12 +3,13 @@ class Api::CollectionsController < ApplicationController
   def index
     if current_user
       @collections = current_user.collections
-    end 
+    end
 
   end
 
   def create
     @collection = Collection.new(collection_params)
+    @collection.user_id = current_user.id 
     if @collection.save
       render :show
     else

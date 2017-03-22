@@ -12,19 +12,19 @@ export const fetchCollection = (id) => (
   })
 );
 
-export const createCollection = (collection_name) => {
+export const createCollection = (name) => {
 
   return $.ajax({
     method: 'POST',
     url: 'api/collections',
-    data: { collection_name }
+    data: { name }
   });
 };
-export const updateCollection = (collection_name) => {
+export const updateCollection = (name) => {
 
   return $.ajax({
     method: 'PATCH',
     url: 'api/collections',
-    data: { collection_name }
+    data: { name }
   });
 };

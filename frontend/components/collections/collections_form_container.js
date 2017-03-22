@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
 import CollectionsForm from './collections_form';
-import { fetchCollections, createCollection } from '../../actions/collection_actions';
+import { fetchCollections, makeCollection } from '../../actions/collection_actions';
 
 
 const mapStateToProps = state => ({
-  collections: state.collections,
-  currentUser: state.session.currentUser
+  collections: state.collections
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchCollections: () => dispatch(fetchCollections()),
-  createCollection: collection => dispatch(createCollection(collection))
+  makeCollection: collection => dispatch(makeCollection(collection))
 });
 
 export default connect(

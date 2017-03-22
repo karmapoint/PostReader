@@ -1,9 +1,12 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
-  helper_method :current_user, :logged_in?, :prep_feed, :get_articles
+  helper_method :current_user, :logged_in?, :prep_feed, :get_articles, :get_feed_collections
 
-  private
+
+  def get_feed_collections(feed)
+    @collections = feed.collections
+  end
 
 
   def prep_feed(feed_url)

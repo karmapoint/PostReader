@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { isEmpty } from 'lodash';
 import Loading from '../content/loading';
 import { Articles } from '../articles/articles';
+import CollectionFormContainer from '../collections/collections_form_container';
 
 class Feed extends React.Component {
   constructor(props) {
@@ -17,6 +18,14 @@ class Feed extends React.Component {
     if (newProps.routeParams.id !== this.props.routeParams.id) {
     this.props.fetchFeed(newProps.routeParams.id);
     }
+  }
+
+  collection_button_trigger (){
+    $(".pop-up").toggleClass("hidden", 1000);
+  }
+
+  collection_button_hide(){
+    $(".pop-up").addClass("hidden",1000);
   }
 
 
@@ -34,8 +43,10 @@ class Feed extends React.Component {
     return (
     <section className="bottom content feeds">
       <section className="feedDisplay">
-        <button className="subscribe-button">Add to collection</button>
-
+        <aside className="add-collection-holder" onMouseLeave={() => this.collection_button_hide()}>
+          <button className="subscribe-button" onClick={() => this.collection_button_trigger()}>Add to collection</button>
+          <CollectionFormContainer feedCollections={feed.collections} />
+        </aside>
 
 
         <h2 className="feedTitle"><img src={feed.favicon_url} className="favicon" alt={feed.title} /><a href={feed.site_url} target="_blank">

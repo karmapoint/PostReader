@@ -9,7 +9,8 @@ const defaultFeed = {
     site_url: "",
     feed_url: "",
     favicon_url: "",
-    articles: []
+    articles: [],
+    collections: []
   }
 };
 

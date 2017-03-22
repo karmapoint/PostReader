@@ -23,6 +23,7 @@ class Api::FeedsController < ApplicationController
 
   def show
     @feed = Feed.find(params[:id])
+    @collections = Feed.find(params[:id]).collections
   end
 
   def destroy
