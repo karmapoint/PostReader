@@ -17,17 +17,17 @@ class Sidebar extends React.Component {
     let collection = this.props.collections[key];
     return (
       <ul className="collection-list">
+        <Link to={`/collections/${collection.id}`} activeClassName="active">
       <li className="collection-title" key={collection.name + key}>
         <i className="fa fa-angle-right" aria-hidden="true"/>
-        <Link to={`/collections/${collection.id}`}>
           {collection.name}
-        </Link>
       </li>
+      </Link>
 
       {
         collection.feeds.map(
           feed => (
-            <Link to={`/feeds/${feed.id}`} >
+            <Link to={`/feeds/${feed.id}`} activeClassName="active">
               <li className="feed-title">
                 <img src={feed.favicon_url} />
                 {feed.title}

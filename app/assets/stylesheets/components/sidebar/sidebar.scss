@@ -14,9 +14,6 @@
     margin-left:3px;
   }
 
-  i:hover {
-    font-weight: bold;
-  }
   .nav {
     margin-top:30px;
   }
@@ -48,11 +45,6 @@
   }
 
 
-
-  li:hover + li:hover i {
-    font-weight: bold;
-  }
-
 }
 
 
@@ -66,7 +58,7 @@
     font-weight:300;
   }
   .collection-title {
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .feed-title {
