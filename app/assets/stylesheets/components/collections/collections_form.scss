@@ -1,0 +1,79 @@
+.pop-up {
+  border: 1px solid $near-white;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2), 0px 0px 2px rgba(0,0,0,0.38);
+  z-index: 500;
+  background-color: #ffffff;
+  height:400px;
+  width:300px;
+  font-size: 14px;
+  position: relative;
+
+}
+
+h2.pop-up-header {
+  color: $light-gray;
+  border-bottom:1px solid #eeeeee;
+  position:fixed;
+  box-sizing: border-box;
+  font-weight: 300;
+  height: 50px;
+  width:300px;
+  padding-left: 20px;
+  padding-top:14px;
+  font-size: 20px;
+  background-color: #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+}
+
+
+.collection-form-list {
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-top:50px;
+  height:310px;
+
+  li {
+    height:40px;
+    line-height: 20px;
+    padding-top:16px;
+    padding-left: 20px;
+    color: $gray;
+
+    i{
+      margin-right: 10px;
+    }
+  }
+
+  li:hover {
+    background-color: #eeeeee;
+  }
+}
+
+
+  .pop-up-button {
+    text-align: center;
+    color: $green;
+    border-top: 1px solid #eeeeee;
+    box-sizing: border-box;
+    height:40px;
+    width:300px;
+    position: absolute;
+    bottom:0px;
+    padding-top: 12px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .pop-up-button:hover {
+    background-color:$green;
+    color: white;
+    cursor: pointer;
+  }
