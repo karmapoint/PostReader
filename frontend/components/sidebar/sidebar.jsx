@@ -42,13 +42,13 @@ class Sidebar extends React.Component {
 
   render () {
 
-    if (isEmpty(this.props.collections) ){
-      return (
-        <section className="bottom content feeds">
-          <Loading />
-        </section>
-      );
-    } else {
+    // if (isEmpty(this.props.collections) ){
+    //   return (
+    //     <section className="bottom content feeds">
+    //       <Loading />
+    //     </section>
+    //   );
+    // } else {
 
       return (
         <div id="left" className="column">
@@ -85,6 +85,6 @@ class Sidebar extends React.Component {
       );
     }
   }
-}
+// }
 
 export default Sidebar;

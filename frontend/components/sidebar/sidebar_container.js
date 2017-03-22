@@ -4,7 +4,8 @@ import { fetchCollections } from '../../actions/collection_actions';
 
 
 const mapStateToProps = state => ({
-  collections: state.collections
+  collections: state.collections,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

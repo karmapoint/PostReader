@@ -1,7 +1,10 @@
 class Api::CollectionsController < ApplicationController
 
   def index
-    @collections = Collection.all
+    if current_user
+      @collections = current_user.collections
+    end 
+
   end
 
   def create
