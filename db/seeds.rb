@@ -115,10 +115,10 @@ ActiveRecord::Base.transaction do
 
     Collection.destroy_all
     Collection.create(name:"Technology", user_id:1)
-    Collection.create(name:"Kids Stuff", user_id:2)
     Collection.create(name:"Entertainment", user_id:1)
     Collection.create(name:"Sports", user_id:1)
     Collection.create(name:"News", user_id:1)
+    Collection.create(name:"Kids Stuff", user_id:2)
 
     CollectedFeed.destroy_all
     CollectedFeed.create(collection_id: 1, feed_id: 1 )
