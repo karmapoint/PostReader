@@ -24,6 +24,7 @@ class Collection extends React.Component {
           </section>
         );
     } else {
+  
     return (
     <section className="bottom content feeds">
       <section className="feedDisplay">
@@ -32,7 +33,7 @@ class Collection extends React.Component {
         </h2>
 
       {
-        this.props.collections[1].feeds.map(
+        collection.feeds.map(
           feed => (
             <Articles feed={feed} key={feed.title + feed.id}/>
           )
