@@ -7,30 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ActiveRecord::Base.transaction do
-  User.destroy_all
-  User.create(email:"hello@guest.com", password:"hello@guest.com")
-  User.create(email:"other_user@guest.com", password:"other_user@guest.com")
 
-  Collection.destroy_all
-  Collection.create(name:"Technology", user_id:1)
-  Collection.create(name:"Kids Stuff", user_id:2)
-  Collection.create(name:"Entertainment", user_id:1)
-  Collection.create(name:"Sports", user_id:1)
-  Collection.create(name:"News", user_id:1)
-
-  CollectedFeed.destroy_all
-  CollectedFeed.create(collection_id: 1, feed_id: 1 )
-  CollectedFeed.create(collection_id: 1, feed_id: 3 )
-  CollectedFeed.create(collection_id: 1, feed_id: 4 )
-  CollectedFeed.create(collection_id: 2, feed_id: 9 )
-  CollectedFeed.create(collection_id: 2, feed_id: 10 )
-  CollectedFeed.create(collection_id: 2, feed_id: 11 )
-  CollectedFeed.create(collection_id: 3, feed_id: 13 )
-  CollectedFeed.create(collection_id: 3, feed_id: 16 )
-  CollectedFeed.create(collection_id: 4, feed_id: 5 )
-  CollectedFeed.create(collection_id: 4, feed_id: 7 )
-  CollectedFeed.create(collection_id: 4, feed_id: 8 )
-  CollectedFeed.create(collection_id: 5, feed_id: 8 )
 
   Feed.destroy_all
   feeds = Feed.create([
@@ -131,6 +108,31 @@ ActiveRecord::Base.transaction do
         "favicon_url"=>"https://www.google.com/s2/favicons?domain_url=http://www.amicohoops.net"
       },
     ])
+
+    User.destroy_all
+    User.create(email:"hello@guest.com", password:"hello@guest.com")
+    User.create(email:"other_user@guest.com", password:"other_user@guest.com")
+
+    Collection.destroy_all
+    Collection.create(name:"Technology", user_id:1)
+    Collection.create(name:"Kids Stuff", user_id:2)
+    Collection.create(name:"Entertainment", user_id:1)
+    Collection.create(name:"Sports", user_id:1)
+    Collection.create(name:"News", user_id:1)
+
+    CollectedFeed.destroy_all
+    CollectedFeed.create(collection_id: 1, feed_id: 1 )
+    CollectedFeed.create(collection_id: 1, feed_id: 3 )
+    CollectedFeed.create(collection_id: 1, feed_id: 4 )
+    CollectedFeed.create(collection_id: 2, feed_id: 9 )
+    CollectedFeed.create(collection_id: 2, feed_id: 10 )
+    CollectedFeed.create(collection_id: 2, feed_id: 11 )
+    CollectedFeed.create(collection_id: 3, feed_id: 13 )
+    CollectedFeed.create(collection_id: 3, feed_id: 16 )
+    CollectedFeed.create(collection_id: 4, feed_id: 5 )
+    CollectedFeed.create(collection_id: 4, feed_id: 7 )
+    CollectedFeed.create(collection_id: 4, feed_id: 8 )
+    CollectedFeed.create(collection_id: 5, feed_id: 8 )
 
     p "Created #{Feed.count} feeds"
 end
