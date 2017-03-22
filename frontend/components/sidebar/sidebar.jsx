@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
   renderCollectionNav(key){
     let collection = this.props.collections[key];
     return (
-      <ul className="collection-list">
+      <ul className="collection-list" key={collection.name+collection.id}>
         <Link to={`/collections/${collection.id}`} activeClassName="active">
       <li className="collection-title" key={collection.name + key}>
         <i className="fa fa-angle-right" aria-hidden="true"/>

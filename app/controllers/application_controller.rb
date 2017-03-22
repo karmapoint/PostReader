@@ -55,6 +55,7 @@ class ApplicationController < ActionController::Base
     @articles = {}
     id = 1
     feed.entries.each do |article|
+      break if id === 11
       author = article.author ? article.author : "staff writer"
       summary = article.summary ? get_summary(article) : ""
       pub = get_date(article)

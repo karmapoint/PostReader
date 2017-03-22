@@ -33,9 +33,9 @@ const renderArticle = (article, feed) => {
 export  const Articles = ({ feed, router }) => {
   if (isEmpty(feed.articles)){
     return (
-      <div>
+      <section>
         <Loading />
-      </div>
+      </section>
     );
   } else {
     return (
