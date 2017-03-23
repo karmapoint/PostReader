@@ -7,3 +7,10 @@ export const createCollectedFeed = (collectedFeed) => {
     data: { collectedFeed }
   });
 };
+export const deleteCollectedFeed = (id) => {
+
+  return $.ajax({
+    method: 'DELETE',
+    url: `api/collected_feeds/${id}`,
+  });
+};

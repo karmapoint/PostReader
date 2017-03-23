@@ -27,7 +27,7 @@ class Sidebar extends React.Component {
       {
         collection.feeds.map(
           feed => (
-            <Link to={`/feeds/${feed.id}`} activeClassName="active">
+            <Link to={`/feeds/${feed.id}`} activeClassName="active" key={feed.title + feed.id}>
               <li className="feed-title">
                 <img src={feed.favicon_url} />
                 {feed.title}
