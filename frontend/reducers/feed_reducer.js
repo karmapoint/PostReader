@@ -32,6 +32,8 @@ const FeedReducer = (state = {}, action) => {
     case RECEIVE_FEED_ERRORS:
       newState.errors = action.errors;
       return newState;
+    case RECEIVE_COLLECTED_FEED:
+      debugger;
     default:
       return state;
   }
