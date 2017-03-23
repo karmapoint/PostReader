@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320234752) do
+ActiveRecord::Schema.define(version: 20170323043026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.string   "author"
+    t.date     "date",       null: false
+    t.string   "url",        null: false
+    t.string   "image_url"
+    t.string   "summary",    null: false
+    t.text     "content",    null: false
+    t.integer  "feed_id",    null: false
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["feed_id"], name: "index_articles_on_feed_id", using: :btree
+    t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
+  end
 
   create_table "collected_feeds", force: :cascade do |t|
     t.integer  "collection_id", null: false

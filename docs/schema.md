@@ -49,16 +49,17 @@ All tables have id (primary key), creation date, and modify date columns.
 | ------------- |:-------------:|:-------------:|
 | title | string | not null |
 | author | string | not null |
-| postTime | datetime | not null |
+| date | date | not null |
 | url | string | not null |
-| thumbnail | string | not null |
+| image_url | string | not null |
 | content | text | not null |
 | feed_id | integer | not null, indexed |
+| user_id | integer | not null, indexed |
 
 
 * **belongs_to** :feed
-* **has_many** :collections through :feed
-* **has_many** :users through :collections
+* **belongs_to** :user
+
 
 
 
