@@ -23,8 +23,8 @@ class CollectionsForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log(this);
     this.props.makeCollection(this.state.collection_name);
+    this.setState({collection_name:""});
   }
 
   update(){
