@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 import { RECEIVE_FEEDS, RECEIVE_FEED, CREATE_FEED, RECEIVE_FEED_ERRORS } from '../actions/feed_actions';
-import { RECEIVE_COLLECTED_FEED } from '../actions/collected_feed_actions';
+
 
 const defaultFeed = {
   1: {
@@ -32,8 +32,6 @@ const FeedReducer = (state = {}, action) => {
     case RECEIVE_FEED_ERRORS:
       newState.errors = action.errors;
       return newState;
-    case RECEIVE_COLLECTED_FEED:
-      debugger;
     default:
       return state;
   }

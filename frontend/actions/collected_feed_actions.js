@@ -29,7 +29,7 @@ const fetchCollectedFeed = (collectedFeed) => dispatch =>
 
 export const makeCollectedFeed = (collectedFeed) => dispatch =>
 (
-  CollectedFeedAPI.createCollectedFeed(collectedFeed).then(id => dispatch(fetchFeed(collectedFeed.feed_id)))
+  CollectedFeedAPI.createCollectedFeed(collectedFeed)
 );
 
 export const removeCollectedFeed = (collectedFeed) => dispatch => (

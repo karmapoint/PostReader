@@ -1,11 +1,12 @@
 class Api::ArticlesController < ApplicationController
 
   def index
-    @articles = Article.all
+    @articles = current_user.articles
   end
 
   def create
-    @article = Article.new(@article_attributes)
+    @article = Article.new(article)
+    @article.user_id = current_user.id
     if @article.save
       render :show
     else

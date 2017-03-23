@@ -36,7 +36,6 @@ export const fetchFeed = (id) => dispatch => (
 
 export const makeFeed = (feed_url) => dispatch => (
   FeedAPI.createFeed(feed_url).then(feed => { dispatch(receiveFeed(feed));
-  return feed;
 }).fail(err => {
   dispatch(receiveErrors(err));})
 

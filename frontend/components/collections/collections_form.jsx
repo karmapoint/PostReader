@@ -47,7 +47,7 @@ class CollectionsForm extends React.Component {
   }
 
   renderCollectionForm(){
-
+    console.log(this.props.feedCollections);
     const collectionClassName = (collection) => {
       let includes = false;
       for(let i = 0; i < this.props.feedCollections.length; i++) {

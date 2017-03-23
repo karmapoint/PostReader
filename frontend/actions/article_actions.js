@@ -17,6 +17,6 @@ export const fetchArticles = () => dispatch =>(
   ArticleAPI.fetchArticles().then(articles => dispatch(receiveArticles(articles)))
 );
 
-export const makeArticle = (article) => dispatch => (
+export const makeArticle = (article) => (
   ArticleAPI.createArticle(article)
 );
