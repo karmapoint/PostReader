@@ -11,15 +11,31 @@ class CollectionsForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.connectFeedToCollection = this.connectFeedToCollection.bind(this);
+    this.handleAdding = this.handleAdding;
   }
 
-  componentWillMount(){
-    this.props.fetchCollections();
+  connectFeedToCollection(collectionId){
+    this.props.makeCollectedFeed({collection_id: collectionId, feed_id:this.props.feedId });
   }
 
-  addTag(){
-    $(".selected_collection").append("<span>(Added)</span>");
-  }
+  handleAdding(e){
+    e.preventDefault();
+    let collectionId = $(e.currentTarget).data("id");
+    alert(`Feed:${this.props.feedId}, Collection:${collectionId}`);
+
+ }
+
+    componentWillMount(){
+      this.props.fetchCollections();
+    }
+
+
+
+
+  // addTag(){
+  //   $(".selected_collection").append("<span>(Added)</span>");
+  // }
 
   handleSubmit(e){
     e.preventDefault();
@@ -43,9 +59,9 @@ class CollectionsForm extends React.Component {
         }
       }
       if (includes) {
-        return "selected_collection";
+        return "selected_collection collectionTarget";
       } else {
-        return "";
+        return "collectionTarget";
       }
     };
     // this.addTag();
@@ -53,8 +69,9 @@ class CollectionsForm extends React.Component {
       <ul className="collection-form-list" >
       {
         Object.keys(this.props.collections).map( key => (
-          <li className={collectionClassName(this.props.collections[key])} key={this.props.collections[key].name + key}>
-          <i className="fa fa-tag" aria-hidden="true"/>
+          <li className={collectionClassName(this.props.collections[key])} key={this.props.collections[key].name + key}
+            onClick={this.handleAdding} data-id={this.props.collections[key].id} >
+          <i className="fa fa-tag" aria-hidden="true"  />
           {this.props.collections[key].name}
           </li>
           )
@@ -65,7 +82,7 @@ class CollectionsForm extends React.Component {
   }
 
   render () {
-    return (
+      return (
       <div className="pop-up hidden">
         <h4 id="pop-up-header">Select Collection</h4>
         { this.renderCollectionForm() }

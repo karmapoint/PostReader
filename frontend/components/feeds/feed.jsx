@@ -45,7 +45,7 @@ class Feed extends React.Component {
       <section className="feedDisplay">
         <aside className="add-collection-holder" onMouseLeave={() => this.collection_button_hide()}>
           <button className="subscribe-button" onClick={() => this.collection_button_trigger()}>Add to collection</button>
-          <CollectionFormContainer feedCollections={feed.collections} />
+          <CollectionFormContainer feedCollections={feed.collections} feedId={feed.id} />
         </aside>
 
 
