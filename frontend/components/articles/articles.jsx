@@ -15,7 +15,6 @@ const toggle = (id) => {
 const renderArticle = (article, feed) => {
 
   let identifier = (feed.id + "FEED-ARTICLE" + article.id);
-
   return (
     <div key={identifier} id={identifier}>
       <a onClick={() => toggle(identifier)} id={"preview" + identifier}>
@@ -25,7 +24,7 @@ const renderArticle = (article, feed) => {
         <div dangerouslySetInnerHTML={{__html: article.summary}} className="preview" />
       </article>
       </a>
-      <Article article={article} identifier={identifier} />
+      <Article article={article} identifier={identifier} feed={feed} />
     </div>
   );
 };

@@ -5,7 +5,7 @@ class Api::ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article)
+    @article = Article.new(article_params)
     @article.user_id = current_user.id
     if @article.save
       render :show

@@ -47,20 +47,22 @@ class CollectionsForm extends React.Component {
   }
 
   renderCollectionForm(){
-    console.log(this.props.feedCollections);
     const collectionClassName = (collection) => {
-      let includes = false;
-      for(let i = 0; i < this.props.feedCollections.length; i++) {
-        const currentCollection = this.props.feedCollections[i];
-        if (currentCollection.id === collection.id) {
-          includes = true;
-          break;
+
+      if (this.props.feedCollections){
+        let includes = false;
+        for(let i = 0; i < this.props.feedCollections.length; i++) {
+          const currentCollection = this.props.feedCollections[i];
+          if (currentCollection.id === collection.id) {
+            includes = true;
+            break;
+          }
         }
-      }
-      if (includes) {
-        return "selected_collection collectionTarget";
-      } else {
-        return "collectionTarget";
+        if (includes) {
+          return "selected_collection collectionTarget";
+        } else {
+          return "collectionTarget";
+        }
       }
     };
     // this.addTag();

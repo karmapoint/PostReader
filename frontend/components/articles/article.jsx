@@ -4,7 +4,8 @@ import { isEmpty } from 'lodash';
 import Loading from '../content/loading';
 import { makeArticle } from '../../actions/article_actions';
 
-const renderFullArticle = (article, identifier) => {
+const renderFullArticle = (article, identifier, feed) => {
+
 
   const toggle = (id) => {
     let target = "#"+id+" .full-article";
@@ -18,7 +19,7 @@ const renderFullArticle = (article, identifier) => {
     <article className="hidden full-article " >
       <ul>
         <li><a onClick={() => toggle(identifier)} id={"preview" + article.id}><i className="fa fa-times article-button close-button" aria-hidden="true"></i></a></li>
-        <li onClick={(event) => saveForLater(event, article)} ><i className="fa fa-bookmark-o article-button" aria-hidden="true" ></i></li>
+        <li onClick={(event) => saveForLater(event, article, feed)} ><i className="fa fa-bookmark-o article-button" aria-hidden="true" ></i></li>
         <li><a href={article.url} key={article.id} target="_blank"><i className="fa fa-external-link article-button" aria-hidden="true"></i></a></li>
       </ul>
 
@@ -31,29 +32,27 @@ const renderFullArticle = (article, identifier) => {
 };
 
 
-const prepSavedArticle = (article) => {
+const prepSavedArticle = (article, feed) => {
   let newArticle = {};
   newArticle.title = article.title;
   newArticle.author = article.author;
   newArticle.url = article.url;
   newArticle.content = article.content;
-  newArticle.feed_id = article.feed_id;
+  newArticle.feed_id = feed.id;
   return newArticle;
 };
 
 
-const saveForLater = (event, article) => {
-
-  console.log(event.currentTarget);
+const saveForLater = (event, article, feed) => {
   $(event.currentTarget).toggleClass("saved-article");
-  makeArticle(prepSavedArticle(article));
+  makeArticle(prepSavedArticle(article, feed));
 };
 
-export const Article = ({ article, identifier, router }) => {
+export const Article = ({ article, identifier, router, feed }) => {
   return (
     <section >
       {
-        renderFullArticle(article, identifier)
+        renderFullArticle(article, identifier, feed)
       }
     </section>
   );
