@@ -12,7 +12,7 @@ class CollectionsForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.connectFeedToCollection = this.connectFeedToCollection.bind(this);
-    this.handleAdding = this.handleAdding;
+    this.handleAdding = this.handleAdding.bind(this);
   }
 
   connectFeedToCollection(collectionId){
@@ -22,8 +22,7 @@ class CollectionsForm extends React.Component {
   handleAdding(e){
     e.preventDefault();
     let collectionId = $(e.currentTarget).data("id");
-    alert(`Feed:${this.props.feedId}, Collection:${collectionId}`);
-
+    this.connectFeedToCollection(collectionId);
  }
 
     componentWillMount(){

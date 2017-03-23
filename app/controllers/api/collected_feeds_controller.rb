@@ -1,11 +1,16 @@
 class Api::CollectedFeedsController < ApplicationController
 
   def create
-    @collected_feed = CollectedFeed.new(collected_feed_params)
-    @collected_feed.save
-    # if @collected_feed.save
-    #   render "api/collections/show/#{@collected_feed.collection_id}"
-    # end
+    @collected_feed = CollectedFeed.new(collected_feeds_params)
+    if @collected_feed.save
+      render :show
+    else
+      render json: @collected_feed.errors.full_messages, status: :unprocessable_entity
+    end 
+  end
+
+  def show
+    @collected_feed = CollectedFeed.find_by(id)
   end
 
   def destroy
@@ -13,7 +18,7 @@ class Api::CollectedFeedsController < ApplicationController
   end
 
   def collected_feeds_params
-    params.permit(:collection_id, :feed_id)
+    params.require(:collectedFeed).permit(:collection_id, :feed_id)
   end
 
 end

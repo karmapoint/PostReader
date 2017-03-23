@@ -13,7 +13,7 @@ class SavedArticles extends React.Component {
   }
 
   renderArticle(article){
-    
+
   }
 
 

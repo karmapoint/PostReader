@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { isEmpty } from 'lodash';
+import { isEmpty, shuffle } from 'lodash';
 import Loading from '../content/loading';
 import { Articles } from '../articles/articles';
 
@@ -17,6 +17,20 @@ class Collection extends React.Component {
     if (newProps.routeParams.id !== this.props.routeParams.id) {
     this.props.fetchCollection(newProps.routeParams.id);
     }
+  }
+
+  prepCollection() {
+      let allArticles =[];
+      this.props.collections[this.props.routeParams.id].feeds.map(
+        feed => (
+          allArticles.concat(feed)
+        )
+      );
+      shuffle(allArticles).map(
+        feed => (
+          <Articles feed={feed} key={feed.title + feed.id}/>
+        )
+      );
   }
 
 

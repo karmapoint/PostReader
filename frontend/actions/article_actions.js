@@ -12,3 +12,11 @@ const createArticle = article => ({
   type: CREATE_ARTICLE,
   article
 });
+
+export const fetchArticles = () => dispatch =>(
+  ArticleAPI.fetchArticles().then(articles => dispatch(receiveArticles(articles)))
+);
+
+export const makeArticle = (article) => dispatch => (
+  ArticleAPI.createArticle(article)
+);

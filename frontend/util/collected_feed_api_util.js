@@ -14,3 +14,12 @@ export const deleteCollectedFeed = (id) => {
     url: `api/collected_feeds/${id}`,
   });
 };
+
+export const receiveCollectedFeed = id => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/collected_feeds/${id}`,
+    data: { id }
+
+  });
+};

@@ -49,7 +49,7 @@ const Root = ({ store }) => {
           <Route path="/feeds/:id" component={ FeedContainer }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/" component={ Content }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/:id"  component={ CollectionContainer }  onEnter={_ensureLoggedIn}  />
-          <Route path="/articles" component={CollectionContainer} onEnter={_ensureLoggedIn} />
+          <Route path="/articles" component={SavedArticlesContainer} onEnter={_ensureLoggedIn} />
           <Route path="/loading" component={ Loading } />
           <Route path="/collections_form" component={ CollectionsFormContainer } />
           <IndexRoute  component={ Content }  onEnter={_ensureLoggedIn}  />
