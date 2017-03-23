@@ -12,6 +12,7 @@ import FeedContainer from './feeds/feed_container';
 import CollectionContainer from './collections/collection_container';
 import Loading from './content/loading';
 import CollectionsFormContainer from './collections/collections_form_container';
+import SavedArticlesContainer from './articles/saved_articles_container';
 
 const Root = ({ store }) => {
 
@@ -48,6 +49,7 @@ const Root = ({ store }) => {
           <Route path="/feeds/:id" component={ FeedContainer }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/" component={ Content }  onEnter={_ensureLoggedIn}  />
           <Route path="/collections/:id"  component={ CollectionContainer }  onEnter={_ensureLoggedIn}  />
+          <Route path="/articles" component={CollectionContainer} onEnter={_ensureLoggedIn} />
           <Route path="/loading" component={ Loading } />
           <Route path="/collections_form" component={ CollectionsFormContainer } />
           <IndexRoute  component={ Content }  onEnter={_ensureLoggedIn}  />
