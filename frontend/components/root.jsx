@@ -13,6 +13,7 @@ import CollectionContainer from './collections/collection_container';
 import Loading from './content/loading';
 import CollectionsFormContainer from './collections/collections_form_container';
 import SavedArticlesContainer from './articles/saved_articles_container';
+import About from './content/about';
 
 const Root = ({ store }) => {
 
@@ -52,6 +53,7 @@ const Root = ({ store }) => {
           <Route path="/articles" component={SavedArticlesContainer} onEnter={_ensureLoggedIn} />
           <Route path="/loading" component={ Loading } />
           <Route path="/collections_form" component={ CollectionsFormContainer } />
+          <Route path="/about" component={ About } />
           <IndexRoute  component={ Content }  onEnter={_ensureLoggedIn}  />
         </Route>
       </Router>
