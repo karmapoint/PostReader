@@ -7,8 +7,9 @@ PostReader is a browser-based RSS reader inspired by [feedly link](http://www.fe
 
 The entire project was conceived, designed, and implemented in a strict two-week timeframe, although I look forward to revisiting it in the future to continue development.
 
-![screenshot][screenshot]
-[screenshot]: http://res.cloudinary.com/postreader/image/upload/v1490370954/postreader_screenshot_ebgvw6.png "PostReader Screenshot"
+
+![screenshot](http://res.cloudinary.com/postreader/image/upload/v1490370954/postreader_screenshot_ebgvw6.png)
+
 
 
 ## Features
