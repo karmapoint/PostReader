@@ -1,4 +1,5 @@
 import * as FeedAPI from '../util/feed_api_util';
+import { hashHistory } from 'react-router';
 
  export const RECEIVE_FEEDS = 'RECEIVE_FEEDS';
  export const RECEIVE_FEED = 'RECEIVE_FEED';
@@ -11,7 +12,7 @@ const receiveFeeds = feeds => ({
   feeds
 });
 
-const receiveFeed = feed => ({
+export const receiveFeed = feed => ({
   type: RECEIVE_FEED,
   feed
 });
@@ -35,7 +36,7 @@ export const fetchFeed = (id) => dispatch => (
 );
 
 export const makeFeed = (feed_url) => dispatch => (
-  FeedAPI.createFeed(feed_url).then(feed => { dispatch(receiveFeed(feed));
+  FeedAPI.createFeed(feed_url).then(feed => { dispatch(receiveFeed(feed)); hashHistory.push(`/feeds/${feed.id}`);
 }).fail(err => {
   dispatch(receiveErrors(err));})
 

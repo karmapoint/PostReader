@@ -9,7 +9,7 @@ class Api::CollectionsController < ApplicationController
 
   def create
     @collection = Collection.new(collection_params)
-    @collection.user_id = current_user.id 
+    @collection.user_id = current_user.id
     if @collection.save
       render :show
     else
@@ -18,7 +18,7 @@ class Api::CollectionsController < ApplicationController
   end
 
   def show
-    @collection = Collection.find(params[:id])
+    @collection = Collection.includes(:feeds).find(params[:id])
   end
 
   def update

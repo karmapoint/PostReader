@@ -21,9 +21,9 @@ class AddContent extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createFeed(this.state.feed_url)
-    .then(feed => this.props.router.push(`/feeds/${feed.id}`))
-    .fail(this.errors);
+    this.props.createFeed(this.state.feed_url).fail(this.errors);
+    // .then(feed => this.props.router.push(`/feeds/${feed.id}`))
+    //
   }
 
   update() {

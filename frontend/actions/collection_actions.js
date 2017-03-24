@@ -10,7 +10,7 @@ const receiveCollections = collections => ({
   collections
 });
 
-const receiveCollection = collection => ({
+export const receiveCollection = collection => ({
   type: RECEIVE_COLLECTION,
   collection
 });

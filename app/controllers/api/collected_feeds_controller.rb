@@ -3,10 +3,12 @@ class Api::CollectedFeedsController < ApplicationController
   def create
     @collected_feed = CollectedFeed.new(collected_feeds_params)
     if @collected_feed.save
+      @feed = @collected_feed.feed
+      @collection = @collected_feed.collection
       render :show
     else
       render json: @collected_feed.errors.full_messages, status: :unprocessable_entity
-    end 
+    end
   end
 
   def show
