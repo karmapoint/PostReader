@@ -2,13 +2,17 @@
   height:100%;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   justify-content: flex-start;
-  background-color: $blackish;
+  background: url("http://res.cloudinary.com/postreader/image/upload/v1490326133/pattern_ew86bt.png");
+  background-color: $green;
+  background-size:cover;
 }
+
 
 .login-form-box {
   display:flex;

@@ -76,40 +76,38 @@ class SessionForm extends React.Component {
 			<div className="login-form-container">
 
 				<div className="login-form-box">
-				<form>
-					<img src="https://res.cloudinary.com/postreader/image/upload/v1489611558/postreader_content_logo_r1atgy.png" alt="PostReader Logo"></img>
+					<form>
+						<img src="https://res.cloudinary.com/postreader/image/upload/v1489611558/postreader_content_logo_r1atgy.png" alt="PostReader Logo"></img>
 
-					<h2><span>{this.props.formType}</span> to PostForm</h2>
-					<div className="errors">{this.renderErrors()}</div>
-					<div className="login-form">
-						<br/>
-							<input type="text"
-								value={this.state.email}
-								onChange={this.update("email")}
-								className="login-input"
-								placeholder="Email" />
-						<br/>
+						<h2><span>{this.props.formType}</span> to PostForm</h2>
+						<div className="errors">{this.renderErrors()}</div>
+						<div className="login-form">
+							<br/>
+								<input type="text"
+									value={this.state.email}
+									onChange={this.update("email")}
+									className="login-input"
+									placeholder="Email" />
+							<br/>
 
-							<input type="password"
-								value={this.state.password}
-								placeholder="Password"
-								onChange={this.update("password")}
-								className="login-input" />
-						<br/>
-						<button type="submit"
-							onClick={this.handleSubmit} >
-							{this.props.formType}
-						</button>
-						<button type="submit" className="demoSubmit"
-							onClick={this.demoSubmit} >
-							DEMO
-						</button>
-
-
-					</div>
-				</form>
-				<p className="switch">{this.navLink()}</p>
-			</div>
+								<input type="password"
+									value={this.state.password}
+									placeholder="Password"
+									onChange={this.update("password")}
+									className="login-input" />
+							<br/>
+							<button type="submit"
+								onClick={this.handleSubmit} >
+								{this.props.formType}
+							</button>
+							<button type="submit" className="demoSubmit"
+								onClick={this.demoSubmit} >
+								DEMO
+							</button>
+						</div>
+					</form>
+					<p className="switch">{this.navLink()}</p>
+				</div>
 
 			</div>
 		);
