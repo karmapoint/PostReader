@@ -13,13 +13,21 @@ class Sidebar extends React.Component {
 
   }
 
+  toggleFeeds(event, id){
+    $(event.currentTarget).toggleClass('fa-angle-down');
+    let picker = 'li.'+ id;
+    $(picker).toggleClass('hidden');
+    $(event.currentTarget).toggleClass('fa-angle-right');
+  }
+
+
   renderCollectionNav(key){
     let collection = this.props.collections[key];
     return (
       <ul className="collection-list" key={collection.name+collection.id}>
         <Link to={`/collections/${collection.id}`} activeClassName="active">
       <li className="collection-title" key={collection.name + key}>
-        <i className="fa fa-angle-right" aria-hidden="true"/>
+        <i className="fa fa-angle-down" aria-hidden="true" onClick={(event) => this.toggleFeeds(event, collection.id) }/>
           {collection.name}
       </li>
       </Link>
@@ -28,7 +36,7 @@ class Sidebar extends React.Component {
         collection.feeds.map(
           feed => (
             <Link to={`/feeds/${feed.id}`} activeClassName="active" key={feed.title + feed.id}>
-              <li className="feed-title">
+              <li className={"feed-title " + collection.id}>
                 <img src={feed.favicon_url} />
                 {feed.title}
               </li>
@@ -40,6 +48,7 @@ class Sidebar extends React.Component {
     );
   }
 
+
   render () {
 
     // if (isEmpty(this.props.collections) ){
@@ -49,6 +58,8 @@ class Sidebar extends React.Component {
     //     </section>
     //   );
     // } else {
+    // <li><i className="fa fa-cog" aria-hidden="true">
+    // </i>Organize my feeds</li>
 
       return (
         <div id="left" className="column">
@@ -58,8 +69,7 @@ class Sidebar extends React.Component {
               <Link to="/home" ><li><img src="http://res.cloudinary.com/postreader/image/upload/v1489632329/logo_side_bar_icon_tma2tz.png" alt="PostReader Sidebar Logo" /> Popular feeds</li></Link>
               <Link to="/articles" activeClassName="active"><li><i className="fa fa-bookmark-o" aria-hidden="true">
               </i> Saved articles</li></Link>
-              <li><i className="fa fa-cog" aria-hidden="true">
-              </i>Organize my feeds</li>
+
             </ul>
             <section className="collections-and-feeds">
               <h2>FEEDS</h2>
