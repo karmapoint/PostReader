@@ -6,11 +6,12 @@ export const createCollectedFeed = (collectedFeed) => {
     data: { collectedFeed },
   });
 };
-export const deleteCollectedFeed = (id) => {
+export const deleteCollectedFeed = (collectedFeed) => {
 
   return $.ajax({
     method: 'DELETE',
-    url: `api/collected_feeds/${id}`,
+    url: `api/collected_feeds/${collectedFeed.feed_id}`,
+    data: { collectedFeed },
   });
 };
 

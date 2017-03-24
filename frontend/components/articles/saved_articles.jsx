@@ -47,7 +47,7 @@ class SavedArticles extends React.Component {
           <section className="feedDisplay">
           <div>
           {
-            Object.keys(this.props.articles).map(
+            Object.keys(this.props.articles).reverse().map(
               key => this.renderArticle(this.props.articles[key])
             )
           }

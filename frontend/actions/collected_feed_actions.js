@@ -39,5 +39,9 @@ export const makeCollectedFeed = (collectedFeed) => dispatch =>
 );
 
 export const removeCollectedFeed = (collectedFeed) => dispatch => (
-  CollectedFeedAPI.deleteCollectedFeed(collectedFeed).then(id => dispatch(console.log(id)))
-);
+  CollectedFeedAPI.deleteCollectedFeed(collectedFeed)
+  .then(_collectedFeed => {
+      dispatch(receiveFeed(_collectedFeed.feed));
+      dispatch(receiveCollection(_collectedFeed.collection));
+    })
+  );

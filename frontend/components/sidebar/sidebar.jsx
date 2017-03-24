@@ -27,7 +27,8 @@ class Sidebar extends React.Component {
       <ul className="collection-list" key={collection.name+collection.id}>
         <Link to={`/collections/${collection.id}`} activeClassName="active">
       <li className="collection-title" key={collection.name + key}>
-        <i className="fa fa-angle-down" aria-hidden="true" onClick={(event) => this.toggleFeeds(event, collection.id) }/>
+        <i className="fa fa-angle-down" aria-hidden="true"
+          onClick={(event) => this.toggleFeeds(event, collection.id) }/>
           {collection.name}
       </li>
       </Link>
@@ -35,7 +36,8 @@ class Sidebar extends React.Component {
       {
         collection.feeds.map(
           feed => (
-            <Link to={`/feeds/${feed.id}`} activeClassName="active" key={feed.title + feed.id}>
+            <Link to={`/feeds/${feed.id}`} activeClassName="active"
+              key={feed.title + feed.id}>
               <li className={"feed-title " + collection.id}>
                 <img src={feed.favicon_url} />
                 {feed.title}

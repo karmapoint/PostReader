@@ -12,29 +12,31 @@ class CollectionsForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.connectFeedToCollection = this.connectFeedToCollection.bind(this);
-    this.handleAdding = this.handleAdding.bind(this);
+    this.disconnectFeedToCollection = this.disconnectFeedToCollection.bind(this);
+    this.handleAddingDeleting = this.handleAddingDeleting.bind(this);
   }
 
   connectFeedToCollection(collectionId){
     this.props.makeCollectedFeed({collection_id: collectionId, feed_id:this.props.feedId });
   }
+   disconnectFeedToCollection(collectionId){
+    this.props.removeCollectedFeed({collection_id: collectionId, feed_id:this.props.feedId });
+  }
 
-  handleAdding(e){
+  handleAddingDeleting(e){
     e.preventDefault();
     let collectionId = $(e.currentTarget).data("id");
-    this.connectFeedToCollection(collectionId);
+    if ($(e.currentTarget).hasClass("selected_collection")) {
+      this.disconnectFeedToCollection(collectionId);
+    } else {
+      this.connectFeedToCollection(collectionId);
+    }
  }
 
     componentWillMount(){
       this.props.fetchCollections();
     }
 
-
-
-
-  // addTag(){
-  //   $(".selected_collection").append("<span>(Added)</span>");
-  // }
 
   handleSubmit(e){
     e.preventDefault();
@@ -65,13 +67,13 @@ class CollectionsForm extends React.Component {
         }
       }
     };
-    // this.addTag();
+
     return (
       <ul className="collection-form-list" >
       {
         Object.keys(this.props.collections).map( key => (
           <li className={collectionClassName(this.props.collections[key])} key={this.props.collections[key].name + key}
-            onClick={this.handleAdding} data-id={this.props.collections[key].id} >
+            onClick={this.handleAddingDeleting} data-id={this.props.collections[key].id} >
           <i className="fa fa-tag" aria-hidden="true"  />
           {this.props.collections[key].name}
           </li>
