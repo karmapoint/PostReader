@@ -25,8 +25,8 @@ const FeedReducer = (state = {}, action) => {
     case RECEIVE_FEEDS:
       return action.feeds;
     case RECEIVE_FEED:
-      const newFeed = {[action.feed.id]: action.feed};
-      return merge({}, state, newFeed);
+      newState[action.feed.id] = action.feed;
+      return newState;
     case CREATE_FEED:
       return merge({}, action.feed);
     case RECEIVE_FEED_ERRORS:

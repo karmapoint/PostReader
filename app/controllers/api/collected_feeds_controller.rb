@@ -17,9 +17,10 @@ class Api::CollectedFeedsController < ApplicationController
 
   def destroy
     @collected_feed = CollectedFeed.find_by(collected_feeds_params)
+    @feed = @collected_feed.feed
+    @collection = @collected_feed.collection
     if @collected_feed.destroy
-      @feed = @collected_feed.feed
-      @collection = @collected_feed.collection
+
       render :show
     else
       render json: @collected_feed.errors.full_messages, status: :unprocessable_entity

@@ -37,7 +37,9 @@ class CollectionsForm extends React.Component {
       this.props.fetchCollections();
     }
 
-
+    componentWillReceiveProps(){
+      
+    }
 
 
   handleSubmit(e){
