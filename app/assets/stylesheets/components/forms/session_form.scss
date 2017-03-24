@@ -8,9 +8,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   justify-content: flex-start;
-  background: url("http://res.cloudinary.com/postreader/image/upload/v1490326133/pattern_ew86bt.png");
-  background-color: $green;
-  background-size:cover;
+  background-color: $blackish;
+  // background: url("http://res.cloudinary.com/postreader/image/upload/v1490326133/pattern_ew86bt.png");
+  // background-size:cover;
 }
 
 
@@ -22,7 +22,7 @@
   padding:24px;
   margin: auto;
   flex-direction:column;
-  height: 540px;
+  height: 560px;
   width: 360px;
   background-color:#ffffff;
   border: 1px solid $gray;
@@ -83,6 +83,12 @@
     h2 {
       font-weight:600;
       font-size: 22px;
+      margin-bottom:10px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 18px;
     }
 
     .errors {

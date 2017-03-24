@@ -80,6 +80,7 @@ class SessionForm extends React.Component {
 						<img src="https://res.cloudinary.com/postreader/image/upload/v1489611558/postreader_content_logo_r1atgy.png" alt="PostReader Logo"></img>
 
 						<h2><span>{this.props.formType}</span> to PostForm</h2>
+						<h3>A simple browser-based RSS Reader</h3>
 						<div className="errors">{this.renderErrors()}</div>
 						<div className="login-form">
 							<br/>
