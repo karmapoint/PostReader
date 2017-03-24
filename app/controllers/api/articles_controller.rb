@@ -1,7 +1,7 @@
 class Api::ArticlesController < ApplicationController
 
   def index
-    @articles = current_user.articles
+    @articles = current_user.articles.reverse
   end
 
   def create

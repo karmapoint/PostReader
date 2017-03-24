@@ -1,21 +1,43 @@
 import React from 'react';
 import HeaderContainer from '../header/header_container';
+import { Link } from 'react-router';
 
 
 const Content = () => {
   return (
-    <section className="bottom content">
-      <p>Placeholder text for now....</p>
-      <p>Currently you can click on "All" in the left menu to see all Feeds currently entered into the app. Clicking on a feed title will load that title allowing you to see previews of the articles of that feed. Clicking a preview will open a full article.</p>
-      <p>The Add content button on the bottom of the sidebar is also active. You can add a feed - but make sure the url is for an RSS feed, not just a website address or it will not work.  The error handling should work correctly.</p>
-      <p>Next steps:</p>
+    <section className="bottom content feeds popular">
+      <h2 className="sectionTitle"><i className="fa fa-rss" aria-hidden="true"></i> Popular Feeds</h2>
+
+      <aside className="welcome">
+        <img src="http://res.cloudinary.com/postreader/image/upload/v1490332783/postreader_light_oouyzr.png" className="popular-image" />
+        <h1>Welcome to PostReader</h1>
+        <h3>A simple browser-based RSS Reader <br />inspired by <a href="http://www.feedly.com" target="_blank">Feedly</a></h3>
+      </aside>
+
+      <p>Rather navigating to dozens of sites for your daily news, wouldn't it be great if all of that information could be channelled directly to you?</p>
+
+      <p>RSS is here to help you.</p>
+
+
+      <p>Browse our existing <Link to="/feeds">list of feeds</Link>, or easily <Link to="/add_content">add new feeds</Link> to our catalog. When you find one that you would like to save, click the <strong>"Add to Collection"</strong> button for that feed to add the feed to a new or existing collection.</p>
+
+    <h3>Technology:</h3>
+    <ul>
+      <li>WIRED</li>
+      <li>TechCrunch</li>
+      <li>Engadget</li>
+    </ul>
+    <h3>News:</h3>
       <ul>
-        <li>Adding Collections (these will appear where the placeholders currently sit in the sidebar)</li>
-        <li>Allow users to add feeds to collections</li>
-        <li>Enable articles to be saved</li>
-        <li>Ability to edit/reorganize collections</li>
-        <li>Add homepage content to replace this text. These will be some popular feeds that new users can start with.</li>
-        <li>Finally, I'm hoping to have time to add a few bonus features like the ability to search for keywords within saved articles and use facebook/twitter/email sharing of articles.</li>
+        <li>The New York Times</li>
+        <li>The Huffington Post</li>
+        <li>BBC News</li>
+      </ul>
+    <h3>Entertainment:</h3>
+      <ul>
+        <li>Entertainment Weekly</li>
+        <li>Variety</li>
+        <li>/Film</li>
       </ul>
 
     </section>
