@@ -39,7 +39,6 @@ class Feed extends React.Component {
           </section>
         );
     } else {
-      console.log(this.props.feed);
     return (
     <section className="bottom content feeds">
       <section className="feedDisplay">
