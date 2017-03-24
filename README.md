@@ -39,9 +39,7 @@ def prep_feed(feed_url)
 end
 ````
 
-
-![form][form]
-[form]: http://res.cloudinary.com/postreader/image/upload/v1490373928/add_content_uaayan.png "PostReader Screenshot"
+![form](http://res.cloudinary.com/postreader/image/upload/v1490373928/add_content_uaayan.png)
 
 
 
@@ -50,13 +48,11 @@ Feeds can be viewed on a `index` page that lists all feeds, or you can click on 
 
 The entire array of current articles are passed as an array and rendered within an `Articles` React Component. Clicking on the preview of any individual article will then make the full `Article` component visible.
 
-![wireframe][wireframe]
-[wireframe]:http://res.cloudinary.com/postreader/image/upload/v1490372608/article_wireframe_dnd17r.png "Article wireframe"
+![wireframe](http://res.cloudinary.com/postreader/image/upload/v1490372608/article_wireframe_dnd17r.png)
 
 Since this project is still in the MVP phase, I decided against storing all articles in my database. However, I do allow visitors to create `SavedArticles` to read later by clicking on a familiar bookmark icon in the upper right of an article.  These can be viewed at any time by clicking on the "Saved articles" link in the sidebar.
 
-![article][article]
-[article]:http://res.cloudinary.com/postreader/image/upload/v1490373735/article_top_disvik.png "Article top"
+![article](http://res.cloudinary.com/postreader/image/upload/v1490373735/article_top_disvik.png)
 
 
 ### Creating collections to manage feeds
@@ -64,8 +60,7 @@ Collections are the method that visitors can organize their RSS feeds. There is 
 
 This is all handled using a `collected_feeds` join table in the backend that simply lists `feed_id`s with their containing `collection_id`s.  Collections are already owned by `users` by setting a `user_id` when the `collection` is created.
 
-![CollectionForm][CollectionForm]
-[CollectionForm]:http://res.cloudinary.com/postreader/image/upload/v1490376590/collections_form_hvwe3e.png "Collection form"
+![CollectionForm](http://res.cloudinary.com/postreader/image/upload/v1490376590/collections_form_hvwe3e.png)
 
 The articles from all feeds within a collection appear on the show page for that collection. The feeds (and their favicons) also appear in the sidebar allowing for intuitive navigation.
 
