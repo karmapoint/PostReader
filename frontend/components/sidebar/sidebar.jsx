@@ -10,8 +10,9 @@ class Sidebar extends React.Component {
 
   componentWillMount(){
     this.props.fetchCollections();
-
   }
+
+
 
   toggleFeeds(event, id){
     $(event.currentTarget).toggleClass('fa-angle-down');

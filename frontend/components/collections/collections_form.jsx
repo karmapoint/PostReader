@@ -38,6 +38,8 @@ class CollectionsForm extends React.Component {
     }
 
 
+
+
   handleSubmit(e){
     e.preventDefault();
     this.props.makeCollection(this.state.collection_name);
