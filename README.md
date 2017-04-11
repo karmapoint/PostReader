@@ -2,10 +2,10 @@
 
 [PostReader live link](https://www.postreader.net)
 
-PostReader is a browser-based RSS reader inspired by [feedly link](http://www.feedly.com). It is a full-stack web application utilizing Ruby on Rails, a PostgreSQL database, and React on the frontend, implemented utilizing the Redux methodology.
+PostReader is a browser-based RSS reader inspired by [feedly](http://www.feedly.com). It is a full-stack web application utilizing Ruby on Rails, a PostgreSQL database, and React on the frontend, implemented utilizing the Redux methodology.
 
 
-The entire project was conceived, designed, and implemented in a strict two-week timeframe, although I look forward to revisiting it in the future to continue development.
+The entire project was conceived, designed, and completed in a strict two-week timeframe, although I look forward to revisiting it in the future to continue development.
 
 
 ![screenshot](http://res.cloudinary.com/postreader/image/upload/v1490370954/postreader_screenshot_ebgvw6.png)
@@ -15,9 +15,9 @@ The entire project was conceived, designed, and implemented in a strict two-week
 ## Features
 
 ### Adding and viewing RSS feeds
-I used a ruby gem called [feedjira link](http://feedjira.com/) to fetch and parse the XML within the RSS feeds. Additionally I augmented the dynamic data with the the favicon of the feed's parent site which I scraped the Google S2 converter, a simple tool where you add your target to the end of the url: (https://www.google.com/s2/favicons?domain=www.postreader.net)
+I used a ruby gem called [feedjira](http://feedjira.com/) to fetch and parse the XML within the RSS feeds. Additionally I augmented the dynamic data with the the favicon of the feed's parent site which I scraped using the Google S2 converter, a simple tool where you add your target to the end of the url: (https://www.google.com/s2/favicons?domain=www.postreader.net)
 
-After prepping the information from the RSS feed, I add them to my `feeds` table and provide api access to both `show.json.jbuilder` and `index.json.jbuilder` files.
+After prepping the information from the RSS feed, I add each feed to my `feeds` table and provide api access to both `show.json.jbuilder` and `index.json.jbuilder` files.
 
 ````Ruby
 def prep_feed(feed_url)
@@ -44,7 +44,7 @@ end
 
 
 ### Opening and saving articles
-Feeds can be viewed on a `index` page that lists all feeds, or you can click on a feed to view a show page for that specific feed. In this view, PostFeed will display the ten most recent posts currently being pushed out by the RSS feed.  
+Feeds can be viewed on an `index` page that lists all feeds, or you can click on a feed to view a show page for that specific feed. In this view, PostFeed will display the ten most recent posts currently being pushed out by the RSS feed.  
 
 The entire array of current articles are passed as an array and rendered within an `Articles` React Component. Clicking on the preview of any individual article will then make the full `Article` component visible.
 
