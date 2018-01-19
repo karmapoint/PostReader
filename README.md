@@ -1,6 +1,6 @@
 # PostReader - inspired by feedly
 
-[PostReader live link](https://www.postreader.net)
+[PostReader live link](https://post-reader.herokuapp.com/)
 
 PostReader is a browser-based RSS reader inspired by [feedly](http://www.feedly.com). It is a full-stack web application utilizing Ruby on Rails, a PostgreSQL database, and React on the frontend, implemented utilizing the Redux methodology.
 
